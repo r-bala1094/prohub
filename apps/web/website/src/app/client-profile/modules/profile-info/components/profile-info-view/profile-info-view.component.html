@@ -1,0 +1,29 @@
+<section>
+    <div class="d-flex justify-content-center my-3">
+        <ng-container *ngIf="profilePic; else elseBlock">
+            <img [src]="profilePic" class="profile-pic">
+        </ng-container>
+        <ng-template #elseBlock>          
+            <span class="material-icons profile-icon">
+                account_circle
+            </span>
+        </ng-template>
+    </div>
+    <div class="mb-3 mt-4 form-container">
+        <div class="my-3 col-12">
+            <span class="d-flex flex-column">
+                <span class="title">Name</span>
+                <span class="value">{{name}}</span>
+            </span>
+        </div>
+        <div class="col-12 my-3">
+            <span class="d-flex flex-column">
+                <span class="title">Email</span>
+                <span class="value">{{email}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="col-12 d-flex justify-content-end py-4">
+        <span class="cancel-btn clickable">Close Account</span>
+    </div>
+</section>

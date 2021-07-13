@@ -1,0 +1,48 @@
+form {
+  font: normal normal 600 14px/52px Libre Franklin;
+  letter-spacing: 0px;
+  color: #212121;
+
+  .title-input {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 0px 20px;
+    font: normal normal 600 23px/75px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+    margin-bottom: 20px;
+    width: 550px;
+  }
+
+  .label {
+    text-align: left;
+    font: normal normal 600 14px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+
+  .date-control {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font: normal normal 500 16px/75px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+    height: 45px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+
+  .mat-radio-group {
+    flex-wrap: wrap;
+    height: 120px;
+
+    .mat-radio-button {
+      height: 40px;
+      width: 300px;
+    }
+  }
+}

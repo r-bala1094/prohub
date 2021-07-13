@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~nouislider/dist/nouislider.min.css";
+
+* {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.bottom-shadow:after {
+  content: "";
+  display: block;
+  height: 8px;
+  background: transparent;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.4) 0%,
+    #f5f5f5 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.4) 0%,
+    #f5f5f5 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    #f5f5f5 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.bottom-shadow div {
+  padding: 18px;
+  background: #fff;
+}
+
+.noUi-connect {
+  background: #3f63c8;
+}
+
+.noUi-horizontal .noUi-handle {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+}
+
+.noUi-horizontal {
+  height: 12px;
+}
+
+.clickable {
+  cursor: pointer;
+}

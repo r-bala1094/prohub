@@ -1,0 +1,39 @@
+<div class="questions-container">
+    <div class="title">
+        Add Screening Question
+        <span class="material-icons" (click)="close()">
+            cancel
+        </span>            
+    </div>
+    <div class="own-questions">
+        <div class="option" (click)="toggleShowOwn()">
+            Create your own
+        </div>
+        <div *ngIf="showYourOwn">
+            <div class="label">Add Question</div>
+            <input type="text" placeholder="Do you have any questions?" [formControl]="ownQuestion" matInput>
+            <div class="hint" align="end">{{ownQuestion.value.length}} /256 characters</div>
+        </div>
+    </div>
+    <div class="splitter">
+        <div class="splitter-line"></div>
+        <div>or</div>
+        <div class="splitter-line"></div>
+    </div>
+    <div class="suggested-questions">
+        <div class="sugg-title">Select from our suggested questions</div>
+        <mat-checkbox *ngFor="let sugg of suggestedQuestions; let i = index"
+        class="checkbox"
+        [checked]="sugg.isChecked"
+        color="primary"
+        (change)="toggleSelection(i)"
+        >
+        {{sugg.ques}}
+        </mat-checkbox>
+    </div>
+    <div class="footer">
+        <button mat-raised-button color="primary" (click)="add()">ADD THESE QUESTIONS</button>
+        <button mat-raised-button (click)="close()">Close</button>
+    </div>
+</div>
+

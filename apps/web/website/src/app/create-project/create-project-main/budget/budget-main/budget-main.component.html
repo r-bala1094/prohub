@@ -1,0 +1,111 @@
+<form class="container" [formGroup]="budgetInfo">
+    <div class="header">
+        <div class="title">
+            Budget
+            <span>Step 5 of 7</span>
+        </div>
+        <div class="save-status">
+            {{isSaved ? 'Saved' : ''}}
+        </div>
+    </div>
+    <div>
+        <mat-label>How would you like to pay ?</mat-label>
+        <mat-radio-group color="primary" aria-label="Select an option" formControlName="budget">
+            <div class="option">
+                <mat-radio-button value="1"></mat-radio-button>
+                <span class="material-icons">
+                    watch_later
+                </span>
+                <div> Pay by the hour </div>
+                <div class="help-text"> Pay by the hour to easily scale up and down.</div>
+            </div>
+            <div class="option">
+                <mat-radio-button value="2"></mat-radio-button>
+                <span class="material-icons">
+                sell
+                </span>
+                <div> Pay by a Fixed Price </div>
+                <div class="help-text">Define payment before work begins and pay only when work is delivered</div>
+            </div>
+            <div class="option">
+                <mat-radio-button value="3"></mat-radio-button>
+                <span class="material-icons">
+                person
+                </span>
+                <div> I'm not sure </div>
+                <div class="help-text">Either Pay by the hour or Fixed price</div>
+            </div>
+        </mat-radio-group>
+    </div>
+    <div class="estimated-budget" *ngIf="budgetInfo.value.budget === '1'">
+        <div class="title">
+            Set your estimated budget
+        </div>
+        <mat-radio-group class="estimated-group" color="primary" aria-label="Select an option" formControlName="estimatedBudget">
+            <div class="estimated-option">
+                <mat-radio-button value="1"> Choose the typical hourly range</mat-radio-button>
+                <div class="help-text">The typical hourly rate is in between $24 - $25/hr for projects like yours.</div>
+                <img src="../../../../../assets/budget-chart.png" style="height: 130px; width: 320px;">
+            </div>
+            <div class="estimated-option">
+                <mat-radio-button value="2"> Set your own hourly range</mat-radio-button>
+                <div class="currency" *ngIf="budgetInfo.value.estimatedBudget === '2'">
+                    <mat-label class="label">Select Currency</mat-label>
+                    <mat-select formControlName="selectedCurrency" [compareWith]="compare" placeholder="--Select--">
+                        <mat-option *ngFor="let cur of currency" [value]="cur">
+                        {{cur.currency}}
+                        </mat-option>
+                    </mat-select>
+                </div>
+                <div class="min-max" *ngIf="budgetInfo.value.estimatedBudget === '2'">
+                    <div class="control">
+                        <mat-label class="label">Min. Amount$</mat-label>
+                        <div>
+                            <input type="number" matInput formControlName="minAmount" placeholder='0.00'/>
+                            <span>/hr</span>
+                        </div>
+                    </div>
+                    <div>
+                        <mat-label class="label">to</mat-label>
+                    </div>
+                    <div class="control">
+                        <mat-label class="label">Max. Amount$</mat-label>
+                        <div>
+                            <input type="number" matInput formControlName="maxAmount" placeholder="0.00"/>
+                            <span>/hr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-radio-group>
+        <div class="working-hours">
+            <mat-label class="label">Set maximum working hours</mat-label>
+            <span *ngIf="budgetInfo.value.estimatedBudget === '2'">(Optional)</span>
+            <input type="number" matInput formControlName="maxWorkingHours" placeholder="8.00"/>
+        </div>
+    </div>
+    <div class="fixed-price" *ngIf="budgetInfo.value.budget === '2'">
+        <div class="title">
+            Do you have a specific budget ?
+        </div>
+        <mat-label class="label">Select Currency</mat-label>
+        <mat-select formControlName="selectedCurrency" [compareWith]="compare" placeholder="--Select--">
+            <mat-option *ngFor="let cur of currency" [value]="cur">
+            {{cur.currency}}
+            </mat-option>
+        </mat-select>
+        <mat-label class="label">Total Fixed Amount</mat-label>
+        <div>
+            <input type="number" matInput formControlName="fixedAmount" placeholder="8.00"/>
+        </div>
+    </div>
+    <div class="milestone" *ngIf="budgetInfo.value.budget === '2' || budgetInfo.value.budget === '3'">
+        <mat-label class="label">Do you want to set milestone?</mat-label>
+        <button mat-raised-button color="primary" routerLink="/milestones">SET MILESTONES</button>
+    </div>
+    <div class="footer">
+        <button mat-raised-button (click)="save()">Save</button>
+        <button mat-raised-button (click)="back()">Back</button>
+        <button mat-raised-button color="primary" (click)="next()">Next</button>
+    </div>
+</form>

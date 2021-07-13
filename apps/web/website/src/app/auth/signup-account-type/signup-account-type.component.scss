@@ -1,0 +1,146 @@
+$border-color: #BDBDBD;
+$heading-color: #444853;
+$selected-text-color: #3f63c833;
+$selected-primary-color: #3f63c8;
+$selected-alert-color: #c71919;
+$selected-footer-color: #444853;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+$selected-text-color: #3f63c833;
+$selected-primary-color: #3f63c8;
+$selected-alert-color: #c71919;
+$selected-footer-color: #444853;
+
+.user-logo {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  background-color: #f0efef;
+  color:#b2b3b4;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+
+.navigation-bar {
+  position:sticky;
+  top:0px;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  border: solid 1px #e0e0e0;
+}
+
+
+.menu-bar-content {
+  font-size: 20px;
+}
+
+.menu-bar-1 {
+  grid-area: header1;
+}
+
+.menu-bar-2 {
+  grid-area: header2;
+}
+
+.main-section-1 {
+  grid-area: main1;
+}
+
+.main-section-2 {
+  grid-area: main2;
+}
+
+.main-section-3 {
+  grid-area: main3;
+}
+
+.account-type-options{
+  grid-area: main;
+}
+
+.account-exist {
+  grid-area: footer;
+}
+
+.expertise-container {
+  margin-top: 50px;
+  height: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10% 10% 40% 25%;
+  grid-template-areas:
+    "header1 header1 header2 header2"
+    ". main1 main1 ."
+    ". main2 main3 ."
+    ". footer footer .";
+    justify-items: center;
+    align-items: center;
+    b {
+      font-size: 25px;
+    }
+}
+
+.expertise-heading {
+  text-align: center;
+  font: normal normal 600 16px/19px Libre Franklin;
+  letter-spacing: 0px;
+  color: $heading-color;
+  opacity: 1;
+}
+
+.expertise-content {
+  color: #808080;
+  text-align: center;
+  font: normal normal normal 14px/19px Libre Franklin;
+  letter-spacing: 0px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.main-section-2, .main-section-3 {
+  width: 282px;
+  text-align: center;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+
+  .logo, .expertise-content-box {
+    padding: 10px;
+  }
+}
+
+.account-exist-login {
+  text-align: center;
+  margin: 10px
+}
+
+.account-exist-text {
+  color: $heading-color;
+  text-align: center;
+  font: normal normal normal 16px/22px Libre Franklin;
+  letter-spacing: -0.32px;
+  opacity: 1;
+}
+
+/* ****** navigation bar******* */
+
+.navigation-bar {
+  position:sticky;
+  top:0px;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  border: solid 1px #e0e0e0;
+}

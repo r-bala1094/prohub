@@ -1,0 +1,124 @@
+
+<div class="blur"></div>
+<div class="form-containter">
+  <div class="form-content">
+    <div class="header">
+      Add Work Experience
+      <span (click)="formSubmitHandler('close')" class="material-icons">
+        cancel
+      </span>
+    </div>
+    <form [formGroup]="workExperienceFormGroup"
+    class="form-fields">
+      <!-- title -->
+      <div class="form-fields-title">
+        <label>Title</label>
+        <br/>
+        <input placeholder="Title" type="text" formControlName="title">
+      </div>
+      <!-- employment type -->
+      <div class="form-fields-emp-type">
+        <label>Employment Type</label>
+        <br/>
+        <select formControlName="employmentType" (change)="changedEmployeeType($event.target.value)">
+          <option [value]="''" selected>--Select--</option>
+          <option *ngFor="let employmentType of employmentTypes" [value]="employmentType">
+            {{employmentType}}
+          </option>
+        </select>
+      </div>
+      <!-- company name -->
+      <div class="form-fields-company-name">
+        <label>Company Name</label>
+        <br/>
+        <input type="text" formControlName="companyName"
+        placeholder="Name of your company in which you are working/was working">
+      </div>
+      <!-- company location -->
+      <div class="form-fields-company-location">
+        <label>Enter Location</label>
+        <br/>
+        <mat-form-field floatLabel="never">
+          <mat-label style="padding: 10px;">Enter Location</mat-label>
+          <input type="text"
+            placeholder="Location of your company"
+            matInput
+            formControlName="companyFullAddress"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete"
+            [displayWith]="getLocationText"
+            (optionSelected)="handleAddressChange($event.option.value)">
+            <mat-option *ngFor="let location of filteredLocation" [value]="location">
+              {{location.fullAddress}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <!-- date container -->
+      <div class="form-fields-date">
+        <div class="date">
+          <label>Start date</label>
+          <br/>
+          <mat-form-field floatLabel="never">
+            <mat-label style="padding: 10px;"> Select date</mat-label>
+            <input matInput
+            [matDatepicker]="startDate"
+            formControlName="startDate"
+            (click)="startDate.open()"
+            placeholder="Select Date"
+            autocomplete="off"
+            [max]="workExperienceFormGroup.value.endDate">
+            <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+            <mat-datepicker #startDate ></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="date">
+          <div [ngClass]="{'disable-div': workExperienceFormGroup.value.currentlyWorkingHere}">
+            <label>End date</label>
+            <br/>
+            <mat-form-field floatLabel="never">
+              <mat-label style="padding: 10px;"> Select date</mat-label>
+              <input matInput
+              [matDatepicker]="endDate"
+              formControlName="endDate"
+              (click)="endDate.open()"
+              autocomplete="off"
+              [min]="workExperienceFormGroup.value.startDate"
+              [max]="today">
+              <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+              <mat-datepicker #endDate [startAt]="workExperienceFormGroup.value.startDate"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <input type="checkbox" formControlName="currentlyWorkingHere" id="acceptTerms">
+            <label for="acceptTerms">Currently working here</label>
+          </div>
+        </div>
+      </div>
+      <!-- description -->
+      <div class="form-fields-description">
+        <label>Add description(tasks, responsibilities, achievements</label>
+        <br/>
+        <textarea formControlName="description"></textarea>
+      </div>
+    </form>
+
+    <div class="edit-section">
+      <button mat-raised-button
+      class="close-button"
+      (click)="formSubmitHandler('close')">Close</button>
+      <button *ngIf="formCreateType === 'new' "
+      mat-raised-button
+      [disabled]="(!workExperienceFormGroup.valid)"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('new')">Add</button>
+      <button *ngIf="formCreateType === 'edit' "
+      mat-raised-button
+      [disabled]="(!workExperienceFormGroup.valid)"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('edit')">Save</button>
+    </div>
+  </div>
+</div>

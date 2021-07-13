@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Create Project
+            <span>Step 1 of 7</span>
+        </div>
+        <div class="save-status">
+            {{isSaved ? 'Saved' : ''}}
+        </div>
+    </div>
+    <div>
+        <prohub-title-project #titleInfoComp></prohub-title-project>
+    </div>
+    <div>
+        <prohub-experts-count #expertsComp></prohub-experts-count>
+    </div>
+    <div>
+        <prohub-local-expert #localExpertComp></prohub-local-expert>
+    </div>
+    <div>
+        <prohub-categories-skills #categoriesComp></prohub-categories-skills>
+    </div>
+    <div>
+        <prohub-objectives-deliverables #objectivesComp></prohub-objectives-deliverables>
+    </div>
+    <div>
+        <prohub-description-attachment #descriptionComp></prohub-description-attachment>
+    </div>
+    <div>
+        <prohub-screening-questions #questionsComp></prohub-screening-questions>
+    </div>
+    <div class="footer">
+        <button mat-raised-button (click)="save()">Save</button>
+        <button mat-raised-button (click)="back()">Back</button>
+        <button mat-raised-button color="primary" (click)="next()">Next</button>
+    </div>
+</div>

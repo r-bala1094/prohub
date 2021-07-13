@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Project's Preference (optional)
+            <span>Step 2 of 7</span>
+        </div>
+        <div class="save-status">
+            {{isSaved ? 'Saved' : ''}}
+        </div>
+    </div>
+    <div>
+        <prohub-expertise #expertiseComp></prohub-expertise>
+    </div>
+    <div>
+        <prohub-project-success #successComp></prohub-project-success>
+    </div>
+    <div>
+        <prohub-languages #languagesComp></prohub-languages>
+    </div>
+    <div class="footer">
+        <button mat-raised-button (click)="save()">Save</button>
+        <button mat-raised-button (click)="back()">Back</button>
+        <button mat-raised-button color="primary" (click)="next()">Next</button>
+    </div>
+</div>

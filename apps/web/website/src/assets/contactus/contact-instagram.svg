@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.49" height="90.49" viewBox="0 0 90.49 90.49">
+  <defs>
+    <filter id="Oval" x="0" y="0" width="90.49" height="90.49" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Instagram" transform="translate(12 8)">
+    <g transform="matrix(1, 0, 0, 1, -12, -8)" filter="url(#Oval)">
+      <g id="Oval-2" data-name="Oval" transform="translate(12 8)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+        <circle cx="33.245" cy="33.245" r="33.245" stroke="none"/>
+        <circle cx="33.245" cy="33.245" r="32.745" fill="none"/>
+      </g>
+    </g>
+    <path id="Instagram-2" data-name="Instagram" d="M21.37,30.438H9.067A9.078,9.078,0,0,1,0,21.37V9.067A9.078,9.078,0,0,1,9.067,0h12.3a9.078,9.078,0,0,1,9.067,9.067v12.3a9.078,9.078,0,0,1-9.064,9.071ZM9.067,3.062a6.013,6.013,0,0,0-6.005,6v12.3a6.012,6.012,0,0,0,6.006,6h12.3a6.012,6.012,0,0,0,6-6V9.067a6.012,6.012,0,0,0-6-6.006Zm6.152,20.029a7.872,7.872,0,1,1,7.873-7.872,7.872,7.872,0,0,1-7.873,7.872Zm0-12.682a4.81,4.81,0,1,0,4.81,4.81,4.81,4.81,0,0,0-4.81-4.81Zm7.887-1.117a1.887,1.887,0,1,1,1.887-1.886,1.887,1.887,0,0,1-1.887,1.886Z" transform="translate(18.026 18.026)" fill="#fff"/>
+  </g>
+</svg>

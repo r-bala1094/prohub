@@ -1,0 +1,259 @@
+/*  ************** NAV 2 ************** */
+
+#nav-2 {
+    margin-top:110px;
+}
+
+#user-name {
+    font-weight: bold;
+}
+
+#complete-profile-button {
+    background-color: #3F63C8;
+    color:white;
+}
+
+
+/* ****************** SECTION 1 ***************** */
+
+
+.container-service{
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    padding:50px;
+    margin-top:3%;
+  }
+
+#section1-title, #section2-title {
+    font-weight:bold;
+}
+.card-heading-p{
+    font-size: 18px;
+    color: #B2B7C4;
+}
+
+.card1{
+    background: #FFFFFF ;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    border:none;
+    width:65%;
+    height:80%;
+    padding-top:20px;
+    margin:40px auto;
+   }
+
+.card1:hover, .card2:hover, .card3:hover{
+    background: rgba(65, 101, 200, 0.05) ;
+    border: solid 1px #3F63C8;
+   }
+
+.employee{
+    width:50px;
+    height:auto;
+    margin:0 auto;
+    padding-top:20px;
+   }
+.card2{
+    background: #FFFFFF ;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    border:none;
+    width:65%;
+    height:80%;
+    padding-top:20px;
+    margin:40px auto;
+  }
+  .communications{
+    width:50px;
+    height:auto;
+    margin:0 auto;
+    padding-top:22px;
+  }
+.card3{
+    background: #FFFFFF ;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    border:none;
+    width:65%;
+    height:80%;
+    padding-top:20px;
+    margin:40px auto;
+   }
+   .prohub-logo{
+    width:110px;
+    height:auto;
+    margin:0 auto;
+    padding-top:20px;
+   }
+
+   
+/* ****************** SECTION 2 ***************** */
+
+.section-2{
+    margin-top:5%;
+   }
+
+.section-3{
+    margin-top:40px;
+}
+
+.blue-div{
+ width:50px;
+ height:50px;
+ border-radius:50%;
+ background-color: #3F63C8;
+ box-shadow: 0px 3px 6px #00000029;
+ margin:10px auto;;
+}
+
+.blue-div h4{
+ color:white;
+ text-align: center;
+ padding-top:10px;
+ font-weight: bold
+}
+
+.section3-card1{
+ width: 250px;
+ height: 350px;
+ background: #FFFFFF 0% 0% no-repeat padding-box;
+ box-shadow: 0px 3px 6px #00000029;
+}
+
+.section3-card-text{
+ color: #808080;
+ padding-top:auto;
+}
+
+.blue-div2{
+ width:50px;
+ height:50px;
+ border-radius:50%;
+ background-color: #3F63C8;
+ box-shadow: 0px 3px 6px #00000029;
+ margin:10px auto;
+}
+
+.blue-div2 h4{
+ color:white;
+ text-align: center;
+ padding-top:10px;
+ font-weight: bold
+}
+
+.header{
+ margin-top:10px;
+ font-weight: bold;
+}
+
+.section3-card2{
+ width: 250px;
+ height: 350px;
+ background: #FFFFFF 0% 0% no-repeat padding-box;
+ box-shadow: 0px 3px 6px #00000029;
+}
+
+.section3-card3{
+ width: 250px;
+ height: 350px;
+ background: #FFFFFF 0% 0% no-repeat padding-box;
+ box-shadow: 0px 3px 6px #00000029;
+}
+
+/* ****************** Footer ***************** */
+
+.aboutprohubpricing {
+    margin-top: 5%;
+    padding-top:10px;
+    background-color: #444853;
+    color:white;
+}
+
+.aboutprohubpricing a{
+    text-decoration: underline;
+    color:white;
+}
+
+.aboutprohubpricing a:hover{
+    color:#6d94ff;
+}
+
+/* Footer */
+.footer{
+    border:solid 1px grey;
+    height:320px;
+    background-color:#444853;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.logo-row{
+    padding-top:7px;
+}
+
+.footer-content a{
+    color:white;
+}
+
+.footer-content a:hover{
+   color:#e8edf8;
+   text-decoration: none;
+}
+
+
+
+.footer-content h6 {
+    color:white;
+}
+
+#footer-list{
+   margin-top:40px;
+}
+
+
+.footer-list-p{
+    margin-top:20px;
+   }
+
+.footer-list-p a{
+   color: #B2B7C4;
+}
+
+#submit-button {
+   background-color:#3F63C8;
+   color:white;
+}
+
+#email{
+   background-color: rgba(0, 0, 0, 0.295);
+   border: none;
+   color:white;
+}
+
+
+.logo-row {
+   padding-top:2%;
+   padding-bottom:1%;
+   border-bottom: solid 2px #585d6b;
+}
+
+.bottom-row {
+   background-color: #28292e;
+   height:50px;
+}
+
+.bottom-row h6{
+   color: #B2B7C4;
+   padding-top:20px;
+}
+
+#footer-socialicon {
+    color:#B2B7C4;
+    font-size:20px;
+    margin-top:30px;
+    margin-left:10px;
+}

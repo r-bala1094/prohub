@@ -1,0 +1,107 @@
+
+<div class="blur"></div>
+<div class="form-containter">
+  <div class="form-content">
+    <div class="header">
+      Add Education and Certification
+      <span (click)="formSubmitHandler('close')" class="material-icons">
+        cancel
+      </span>
+    </div>
+    <form [formGroup]="educationFormGroup"
+    class="form-fields">
+      <!-- title -->
+      <div class="form-fields-title">
+        <label>Course/Certification Title</label>
+        <br/>
+        <input placeholder="Title" type="text" formControlName="title">
+      </div>
+      <!-- schoold name -->
+      <div class="form-fields-university-name">
+        <label>Name of your School/University</label>
+        <br/>
+        <mat-form-field floatLabel="never">
+          <mat-label style="padding: 10px;">
+            Name of your School/University
+          </mat-label>
+          <input type="text"
+            placeholder="Name of your School/University"
+            matInput
+            formControlName="universityName"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete"
+            [displayWith]="getUniversityText"
+            (optionSelected)="handleUniversityChange($event.option.value)">
+            <mat-option *ngFor="let university of filteredUniversity" [value]="university">
+              {{university.universityName}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <!-- description -->
+      <div class="form-fields-description">
+        <label>Description or Faculty</label>
+        <br/>
+        <textarea formControlName="description"></textarea>
+      </div>
+      <!-- date container -->
+      <div class="form-fields-date">
+        <div class="date">
+          <label>Start date</label>
+          <br/>
+          <mat-form-field floatLabel="never">
+            <mat-label style="padding: 10px;"> Select date</mat-label>
+            <input matInput
+            [matDatepicker]="startDate"
+            formControlName="startDate"
+            (click)="startDate.open()"
+            placeholder="Select Date"
+            autocomplete="off"
+            [max]="educationFormGroup.value.endDate">
+            <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+            <mat-datepicker #startDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="date">
+          <div [ngClass]="{'disable-div': educationFormGroup.value.notYetPassedOut}">
+            <label>End date</label>
+            <br/>
+            <mat-form-field floatLabel="never">
+              <mat-label style="padding: 10px;"> Select date</mat-label>
+              <input matInput
+              [matDatepicker]="endDate"
+              formControlName="endDate"
+              (click)="endDate.open()"
+              autocomplete="off"
+              [min]="educationFormGroup.value.startDate">
+              <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+              <mat-datepicker #endDate></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <input type="checkbox" formControlName="notYetPassedOut" id="acceptTerms">
+            <label for="acceptTerms">Not Passed Yet</label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="edit-section">
+      <button mat-raised-button
+      class="close-button"
+      (click)="formSubmitHandler('close')">Close</button>
+      <button *ngIf="formCreateType === 'new' "
+      mat-raised-button
+      [disabled]="(!educationFormGroup.valid)"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('new')">Add</button>
+      <button *ngIf="formCreateType === 'edit' "
+      mat-raised-button
+      [disabled]="(!educationFormGroup.valid)"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('edit')">Save</button>
+    </div>
+  </div>
+</div>

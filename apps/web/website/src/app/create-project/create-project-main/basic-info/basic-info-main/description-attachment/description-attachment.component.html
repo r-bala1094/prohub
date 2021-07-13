@@ -1,0 +1,26 @@
+<form [formGroup]="descriptionInfo">
+    <div class="label">Brief Description</div>
+    <textarea class="control" matInput matTextareaAutosize #message minlength="50" maxlength="5000" formControlName="briefDescription" placeholder="Type"></textarea>
+    <div class="hint" align="end">{{message.value.length}} /5000 characters (minimum 50)</div>
+    <div class="dropzone-wrapper">
+        <mat-label class="label">Add Documents/Attachments</mat-label>
+        <div class="dropzone" prohubDnd (fileDropped)="handleUpload($event)">
+            <input type="file" #fileDropRef id="fileDropRef" hidden multiple (change)="handleUpload($event.target.files)"/>
+            <span class="material-icons">
+                cloud_upload
+            </span>
+            <div class="help-text">Drag & Drop or <span (click)="fileDropRef.click()">Browse</span> your files</div>
+        </div>
+    </div>
+    <div *ngFor="let file of controlSectionService.filesListFromServer; let i=index" class="d-flex file-list">
+        <span class="material-icons"  style="color: grey;" >
+            insert_drive_file
+        </span>
+        <div>{{file.fileName}}</div>
+        <span class="material-icons"  style="color: grey; cursor: pointer;"  (click)="deleteFile(i)">
+            delete_forever
+        </span>
+    </div>
+        <div class="label">Any other Requirements (optional)</div>
+        <textarea class="control" matInput matTextareaAutosize formControlName="anyOtherRequirements" placeholder="Please insert any other requirements that you may have or wish to inform prospective hires about...."></textarea>
+</form>

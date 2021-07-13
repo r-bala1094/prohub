@@ -1,0 +1,272 @@
+
+$primary-color: #3F63C8;
+$secondary-color: #3a5ab3;
+$text-color: #444853;
+$disable-text-color: #B2B7C4;
+$grey-button-color: #f0f0f0;
+
+/******************* navbar *******************/
+#navbar {
+    background-color:#fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    position:fixed;
+    z-index:1;
+    top:0px;
+}
+
+.navbar-brand {
+    width: 50px;
+    height: auto;
+}
+
+.nav-item {
+    padding-left:5px;
+}
+
+.nav-link {
+    color: $disable-text-color;
+}
+
+.nav-link:hover{
+    color:#585d6b ;
+}
+
+.nav-link.active {
+    color:$text-color;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    color:$text-color;
+    font-size:25px;
+}
+
+.btn.btn-login{
+    background-color: $grey-button-color;
+    color:$text-color;
+    font-weight: bold;   
+}
+
+.btn.btn-login:hover {
+    background-color:#dddddd;
+}
+
+.btn.btn-signup {
+    background-color: $primary-color;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.btn.btn-signup:hover {
+    background-color: $secondary-color;
+    color:#ffffff;
+}
+
+/* Section-2*/
+.section2 {
+    background-image: url('../../assets/contactus/contact-us-bg.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height:750px;
+    background-size:cover;
+}
+.section2-title {
+    font-weight: bold;
+    margin-top:120px;
+    color: #444853;
+    }
+
+    .section2-cnt{
+        margin:0 auto;
+    }
+    .mat-form-field-flex.ng-tns-c73-0 {
+        width: 325px;
+    }
+    
+.form-field{
+   width: 350px;
+    border:none;
+    margin-top:2px;
+    margin-left:-35px;
+}
+
+
+
+::ng-deep
+.mat-form-field-appearance-outline.mat-focused
+.mat-form-field-outline-thick {
+color: #BDBDBD;
+box-shadow: 0 4px 4px #BDBDBDed !important;
+}
+
+.section2 button:hover {
+    background-color: #3F63C8;
+    color:white;
+}
+
+
+/* *********** Section4 ************ */
+.section4{
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+.card-title {
+    color:#3F63C8;
+    font-weight: bold;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 3px 0px cornflowerblue;
+    padding-bottom: 15px;
+}
+.card:hover{
+    border:solid 1px cornflowerblue
+}
+a.btn.active {
+    box-shadow: 0px 0px 3px 0px cornflowerblue;
+    border-radius: 50px;
+    width:60%;
+    margin-top:10px;
+}
+
+a.btn:hover{
+    background-color: rgb(245, 249, 255);
+    border:solid 1px cornflowerblue;
+}
+/* footer css */
+.footer{
+    margin-top:0%;
+    border:solid 1px grey;
+    height:auto;
+    padding-bottom: 100px;
+    background-color:#444853;
+  }
+  .logo-row{
+    padding-top:7px;
+  }
+  .footer-content a{
+    color:white;
+  }
+  .footer-content a:hover{
+   color:#e8edf8;
+   text-decoration: none;
+   padding-top:10px;
+  }
+  .footer-content h6 {
+    color:white;
+  }
+  #footer-list{
+   margin-top:40px;
+  }
+  .footer-list-p{
+    margin-top:20px;
+   }
+  #submit-button {
+   background-color:#3F63C8;
+   color:white;
+   margin-top:10px;
+  }
+  #email{
+   background-color: rgba(0, 0, 0, 0.295);
+   border: none;
+   color:white;
+   margin-top:10px;
+  }
+  .logo-row {
+   padding-top:2%;
+   padding-bottom:1%;
+   border-bottom: solid 2px #585d6b;
+  }
+  .bottom-row {
+   background-color: #28292e;
+   height:auto;
+  }
+  .bottom-row h6{
+   color: #B2B7C4;
+   padding-top:20px;
+  }
+  #footera{
+    text-decoration: none;
+    font-weight:100;
+    margin-top:20px;
+    color: #B2B7C4;
+  }
+  #footerclient{
+   text-decoration: none;
+   font-weight: 100;
+   padding-top:20px !important;
+   color: #B2B7C4;
+  }
+  #footer-socialicon {
+   color:#B2B7C4;
+  font-size:20px;
+   margin-top:30px;
+   margin-left:10px;
+  }
+  .f-t {
+    background-color: #fff;
+    border: none;
+    text-align: center;
+}
+/* Media queries */
+
+@media only screen and (max-width:480px){
+    #navbar{
+        width:100%;
+    }
+    .mat-form-field{
+width:250px;
+    }
+
+    .visit {
+        width: 100%;
+        height: 100px;
+    }
+    .cards-section{
+        margin-top:-220px;
+    }
+    .contact-form{
+        width:100%;
+        display: block;
+        margin:0 auto;
+        text-align: center;
+    }
+    .section2-title{
+        text-align: center;
+    }
+    .card{
+        margin-top:15px;
+        width: 140%;
+        margin-left: -18px;
+    
+    }
+}
+
+@media(min-width: 768px){
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-top:20px;
+    text-align: center;
+}
+}
+
+
+@media(min-width: 1400px){
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+        margin-top:20px;
+        text-align: center;
+    }
+    }

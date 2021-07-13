@@ -1,0 +1,131 @@
+<!--Header-->
+<section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <nav class="navbar">
+                    <a class="navbar navbar-brand" routerLink="/">
+                        <img src="../../../assets/prohub logo 2.png" height="60px">
+                    </a>
+                    <ul class="navbar nav ms-auto">
+                        <li>
+                            <img src="https://picsum.photos/200" class="rounded-circle" width="50px">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm col-md-4 m-auto text-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="../">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ask a Question</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-sm col-md-4 m-auto text-center">
+                <h2><b>Your Questions</b></h2>
+            </div>
+            <div class="col-sm col-md-4 m-auto text-end">
+                <button mat-raised-button color="primary" routerLink="/ask-question/create"><b>ASK QUESTION</b></button>             
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section3 mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm col-md-2"></div>
+            <div class="col-sm col-md-8 p-4 listTable">
+                <ng-container *ngFor="let user of users; let index = index">
+                    <div class="d-flex flex-row m-auto" #user>
+                        <div class="p-2">
+                            <img src="https://picsum.photos/200" class="rounded-circle" width="60px">
+                        </div>
+                        <div class="p-2 flex-grow-1">
+                            <h5> <strong>{{user.firstName}}</strong></h5>
+                            <p>Lorem ipsum is a dummy text</p>
+                        </div>
+                        <div class="p-2 m-auto">
+                            <button mat-raised-button color="basic">Reply</button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="col-sm col-md-2"></div>
+        </div>
+    </div>
+</section>
+<!-- *************  Footer  ************* -->
+
+<section class="footer mt-5">
+    <div class="container m-auto">
+        <div class="row logo-row">
+            <div class="col-md-8">
+               <img src="./../../assets/landingPage/ProHub-Logo.svg" width="150px" height="80px"/>
+            </div>
+            <div class="col-md-4 text-right">
+                <img id="footer-socialicon" src="./../../assets/landingPage/facebook.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/instagram.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/linkedin.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/youtube.svg" width="15px" height="15px"/>
+            </div>
+        </div>
+        <div class="row footer-content">
+            <div class="col-md-2" id="footer-list">
+                <h6> Join ProHub </h6>
+                <div class="footer-list-p">
+                <p><a id="footera" href="#">As a Professionals</a></p>
+                <p><a id="footerclient" href="#">As a Clients</a></p>
+                </div>
+           </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>About</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Terms & Conditions</a></p>
+                    <p><a  id="footerclient" href="#">Privacy Policy</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Support</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Help & Support</a></p>
+                    <p><a id="footerclient" href="#">As a Clients</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Get our app</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Download IOS App</a></p>
+                    <p><a id="footerclient" href="#">Download Android App</a></p>
+                    </div>
+            </div>
+            <div class="col-md-4" id="footer-list">
+                <h6>Contact Us</h6>
+                <div class="input-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your Email..."/>
+                    <button type="button" class="btn" id="submit-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="last-section bottom-row">
+  <div class="container m-auto">
+    <div class="row">
+        <div class="col-md-5">
+           <h6> ©ProHub International Ltd. 2020 </h6>
+        </div>
+        <div class="col-md-7  text-right">
+          <h6>Report Site Issues | FAQ | Privacy Policy | Complaint Policy | Cancellation Policy</h6>
+        </div>
+    </div>
+  </div>
+  </section>
+

@@ -1,0 +1,162 @@
+/**PopClose Button**/
+button.close {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  /* sign-in-form-heading */
+  .sign-in-form-heading{
+    text-align:center;
+    font-weight: 800;
+    font-size:35px;
+    line-height:38px;
+  }
+  /* pop-form */
+  
+  .login-modal{
+    margin-top:60px;
+  }
+  /*sign-in-form-p*/
+  .form-p{
+   text-align:center;
+   font-weight:600;
+   margin-top:20px;
+   color: #444853;
+  }
+  .signup-text{
+    color: #3F63C8;
+  }
+  .modal-content {
+    width: 410px; 
+  }
+  #signup-text-a{
+    text-decoration: none;
+  }
+  #exampleInputEmail1{
+    border:none;
+    border-bottom:solid 2px rgb(160, 160, 160);
+    width:100%;
+    margin-top:30px;
+   
+  }
+  #exampleInputPassword1{
+    border:none;
+    border-bottom:solid 2px rgb(160, 160, 160);
+    width:100%;
+    margin-top:30px;
+    position:relative;
+  }
+  #form-login-btn{
+    width:100%;
+    background: #3F63C8 0% 0% no-repeat padding-box;
+  border: 1px solid #3F63C8;
+  border-radius: 4px; 
+  color:white;
+  margin-top:20px;
+  }
+  #forgot-password{
+    text-align:right;
+    color: #444853;
+    margin-top:5px;
+  }
+  #sign-in-with{
+    text-align:center;
+    color: #B2B7C4;
+    margin-top:20px;
+  }
+  .form-icons{
+    margin:0 auto;
+    display:block;
+    width:50%;
+    margin-top:20px;
+  }
+ 
+  #fbpng{
+    margin-left:28px;
+  }
+  #applepng{
+    margin-left:10px;
+  }
+  #googlepng{
+    margin-left:10px;
+  }
+  #linkpng{
+    margin-left:10px;
+  } 
+
+  .login-form{
+    width:500px;
+    margin: 40px auto;
+    padding: 30px 20px 20px 30px;
+    box-shadow: 0px 6px 10px #b8b8b86b;
+}
+.login-container{
+  border:solid 1px blue;
+  width:30%;
+}
+
+$selected-text-color: #3f63c833;
+$selected-primary-color: #3f63c8;
+$selected-alert-color: #c71919;
+$selected-footer-color: #444853;
+
+.user-logo {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  background-color: #f0efef;
+  color:#b2b3b4;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+
+.navigation-bar {
+  position:sticky;
+  top:0px;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  border: solid 1px #e0e0e0;
+}
+
+
+.footer {
+  background-color: $selected-footer-color;
+  color:white;
+  padding:30px;
+  width:100%;
+}
+
+.passwrd-form-field{
+  margin-top:10px;
+}
+
+
+
+
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: .4375em 0;
+  /* width: 117%; */
+  width: 412px;
+}
+
+@media only screen and (max-width:480px){
+  .header-container{
+    width:120%;
+  }
+  .navigation-bar{
+    width:120%;
+  }
+  .login-form{
+    width:300px;
+    margin:0 auto;
+    display:block
+  }
+  .form-icons{
+    width:100%;
+    padding-left:18px;
+  }
+}

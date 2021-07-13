@@ -1,0 +1,522 @@
+<!-- nav bar 1-->
+<section class="navbar-top">
+    <div class="container m-auto">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav1 mr-auto">
+                    <li class="nav-item m-1">
+                    +1(202)555-6666
+                    </li>
+                    <ul class="nav nav1 ml-auto">
+                        <li class="nav-item m-1">
+                           <!--  <i class="fa fa-facebook-f"></i> -->
+                           <img src="../../assets/landingPage/instagram.svg" width="15px" height="15px"/>
+                        </li>
+                        <li class="nav-item m-1">
+                            <img src="../../assets/landingPage/facebook.svg" width="15px" height="15px"/>
+                        </li>
+                        <li class="nav-item m-1">
+                            <img src="../../assets/landingPage/linkedin.svg" width="15px" height="15px"/>
+                        </li>
+                        <li class="nav-item m-1">
+                            <img src="../../assets/landingPage/youtube.svg" width="15px" height="15px"/>
+                        </li>  
+                    </ul> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+ <!-- nav bar 2-->
+ <section id="navbar">
+    <div class="container m-auto">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-sm">
+                    <!-- navbar-brand -->
+                    <a href="#" class="navbar-brand mr-auto"> <img src="../../assets/landingPage/prohub_logo_white.svg" width="120px"> </a>
+                    <!-- toogler button for small screen -->
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburgerMenu">
+                        <span class="navbar-toggler-icon m-auto"> <img src="../../assets/landingPage/sidemenu.png" width="2px"/></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="hamburgerMenu"> 
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item m-auto">     
+                                <a href="../Home-Page-1/home-page.html" class="nav-link active">Home</a> 
+                            </li>
+                            <li class="nav-item ml-2">
+                                <a class="nav-link" routerLink="/howitworks">How it Works</a>  
+                            </li>
+                            <li class="nav-item ml-2"> 
+                                <a class="nav-link" routerLink="/about">About Us</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <a class="nav-link" routerLink="/contactus">Contact Us</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <a href="#" class="nav-link" routerLink="/feedbackform">Feedback</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <a class="nav-link" routerLink="/create-project">Post Project</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <button type="submit" class="btn btn-login" (click)="navigateTo('/auth/login')">LOGIN</button> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <button class="btn btn-signup" id="signup-btn" (click)="navigateTo('/auth')">SIGNUP</button> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+  <!-- ************** SECTION 1 ***************** -->
+  <section class="section1"> 
+    <div class="container m-auto">
+        <div class="row">
+            <div class="col-md-6">
+                <p id="head-title"> WORLD CLASS & AFFORDABLE </p>
+                <h2 id="head-title" > Find the perfect service <br> for your business </h2> 
+                <div class="input-group" id="search">
+                    <input type="search" class="form-control" placeholder="What you are looking for ?"/>
+                    <button type="button" class="btn" id="search-button">Search</button>
+                </div>
+                <button class="btn" id="join-as-client"> Join as Client </button>
+                <button class="btn" id="join-as-consultant"> Join as Consultant </button>
+                <button class="btn" id="ask-a-question" routerLink="/ask-question"> Ask a Question </button>
+            </div>
+            <div class="col-md-6">
+                <div id="head-crousel" data-ride="carousel" class="carousel slide carousel-fade">
+                    <div class="carousel-inner"  data-ride="carousel">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="../../assets/landingPage/images.png" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="./../../assets/landingPage/images2.png" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="./../../assets/landingPage/images3.png" alt="Third slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="./../../assets/landingPage/images4.png" alt="Fourth slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="./../../assets/landingPage/images5.png" alt="Fifth slide">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+   <!--  <div style="clear:both"></div> -->
+</section>
+<div style="clear:both"></div>
+  <!-- ************** SECTION 2 ***************** -->
+  <!-- <section id="section2 "> 
+    <div class="container container2">
+        <div class="row">
+              <div class="col-md-12" id="section2-logo">
+                  <img src="./../../assets/landingPage/logo slider/logo1.png" width="150px" height="auto" />
+                  <img src="./../../assets/landingPage/logo slider/logo2.png" width="150px" height="auto" />
+                  <img src="./../../assets/landingPage/logo slider/logo3.png" width="150px" height="auto" />
+                  <img src="./../../assets/landingPage/logo slider/logo4.png" width="150px" height="auto" />
+                  <img src="./../../assets/landingPage/logo slider/logo5.png" width="150px" height="auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="clear:both"></div>
+   -->
+    <!-- ************** SECTION 3 ***************** -->
+    <section id="section3">
+        <div class="container container3 m-auto">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" id="section3-card">
+                        <img src="../../assets/landingPage/section-3-icon.svg" width="80px" height="auto">  
+                        <div class="section3-card-body">
+                            <h4 class="section3-card-title"> Looking for Expertise </h4>
+                            <p class="section3-card-text"> Post projects and hire professionals with ease </p>
+                        </div>
+                        <div class="section3-card-arrow-img text-right" >
+                            <img src="../../assets/landingPage/arrow=right.svg" id="arrow-right" width="30px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" id="section3-card">
+                        <img src="../../assets/landingPage/section-3-icon1.svg" width="80px" height="auto">  
+                        <div class="section3-card-body">
+                            <h4 class="section3-card-title"> Offer Expertise </h4>
+                            <p class="section3-card-text"> Find work, deliver projects and get paid securely</p>
+                        </div>
+                        <div class="section3-card-arrow-img text-right" >
+                            <img src="../../assets/landingPage/arrow=right.svg" id="arrow-right" width="30px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" id="section3-card">
+                        <img src="../../assets/landingPage/section-3-icon2.svg" width="80px" height="auto">  
+                        <div class="section3-card-body">
+                            <h4 class="section3-card-title"> Ask Question</h4>
+                            <p class="section3-card-text">Consult your potential clients to show your expertise</p>
+                        </div>
+                        <div class="section3-card-arrow-img text-right" >
+                            <img src="../../assets/landingPage/arrow=right.svg" id="arrow-right" width="30px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="clear:both"></div>
+
+    <!-- ************** SECTION 4 ***************** -->
+   <section id="section4"> 
+    <div class="container conatiner4 m-auto">
+        <h2 id="section4-title"> Popular Services Expertise Categories </h2>
+        <div class="row">
+            <div class="lds-ring" *ngIf="isFetching"><div></div><div></div><div></div><div></div></div>
+            <div class="col-md-4" *ngFor="let cat of allCategories">
+                <div class="card" id="section4-card">
+                    <div class="d-flex flex-row">
+                        <div class="mt-auto mr-3"><img src="../../assets/landingPage/category_icon.svg" width="20px"/></div>
+                        <div class="flex-grow1 mt-auto"> {{cat.category}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+   <!-- ************** SECTION 5 ***************** -->
+   <section id="section5">
+    <div class="container m-auto" >
+        <div class="row">
+            <div class="col-md-6">         
+                <h2 id="section5-title"> Get work done faster,<br/> with confidence</h2>
+                <div class="borderdiv mt-3"></div>
+            <dl class="detail-list" id="section-5-title">
+                <dt>
+                    <img alt="icon" src="../../assets/landingPage/check.svg" class="img2"/>
+                     Payment protection, guaranteed
+                </dt>
+                <dd id="section-5-description">
+                    Payment is released to the freelancer once you're pleased and approve the work you get.
+                </dd>
+                <dt>
+                    <img alt="icon" src="../../assets/landingPage/check.svg" class="img2"/>
+                    Experts at your fingertips
+                </dt>
+                <dd id="section-5-description">
+                    Find any service within minutes and know exactly what you'll pay. Undertake short, medium
+                    or long term jobs seamlessly.
+                </dd>
+                <dt>
+                    <img alt="icon" src="../../assets/landingPage/check.svg" class="img2"/>
+                    We're here for you 24/7
+                </dt>
+                <dd id="section-5-description">
+                    Reach out to us at any time! We have your back, from answering your questions to resolving
+                    issues.
+                </dd>
+                </dl>
+            </div>
+            <div class="col-md-6 text-right">
+                <img alt="Bootstrap Image Preview" src="../../assets/landingPage/work-confidence.png" class="section5-img"/>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+  <!-- ************** SECTION 6 ***************** -->
+  <section class="section6">
+    <div class="container m-auto">
+        <h2 id="section6">Don't just take our word for it.</h2>
+        <div class="row m-auto">
+            <div class="col-md-4">
+                <div class="card1">
+                <img src="../../assets/landingPage/userimage.jpg" class="img3"/>
+                    <div class="card-body">
+                        <h5 class="card-text">
+                        John Doe
+                        </h5>
+                        <img src="../../assets/landingPage/5stars.png" class="img4"/>
+                    <p class="card-text2"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card1">
+                <img src="../../assets/landingPage/userimage.jpg" class="img3"/>
+                    <div class="card-body">
+                        <h5 class="card-text">
+                        John Doe
+                        </h5>
+                        <img src="../../assets/landingPage/5stars.png" class="img4"/>
+                    <p class="card-text2"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card1">
+                <img src="../../assets/landingPage/userimage.jpg" class="img3"/>
+                    <div class="card-body">
+                        <h5 class="card-text">
+                        John Doe
+                        </h5>
+                        <img src="../../assets/landingPage/5stars.png" class="img4"/>
+                    <p class="card-text2"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+  <!-- Section 7 --> <!-- How it works -->
+  <section id="section7">
+      <div class="container">
+          <h2 id="section7-title"> How it works </h2>
+          <div class="row">
+              <div class="col-md-3 text-center">
+                  <img  src="./../../assets/landingPage/section-7-1.svg" class="section7-img" />
+                  <p class="section7-description"> Ask a Question or<br/> Post a job </p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <img  src="./../../assets/landingPage/section-7-2.svg" class="section7-img" />
+                  <p class="section7-description">Receive responses and<br/> proposals from <br/>experts</p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <img  src="./../../assets/landingPage/section7-3.svg" class="section7-img" />
+                  <p class="section7-description">Safe and Secure<br/> data storage and<br/> payments </p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <img src="./../../assets/landingPage/section-7-4.svg" class="section7-img" />
+                  <p class="section7-description"> Maximise productivity<br/> (via our inbuilt Project<br/> Management Tools) </p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <div style="clear:both"></div>
+
+  <!-- ************** SECTION 6 ***************** -->
+  <section id="section6">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="section5-title"> Give your business the right tool </h2>
+                <div class="borderdiv mt-3"></div>
+            <dl class="detail-list" id="section-5-title">
+                <dt>
+                    <img alt="icon" src="./../../assets/landingPage/check.svg" class="img2"/>
+                    Full transparency
+                </dt>
+                <dd id="section-5-description">
+                    A new shared dashboard allows you to track your team's activity,
+                    so that everyone is always in sync. You can ask questions and receive
+                    responses prior to posting a job.
+                </dd>
+                <dt>
+                    <img alt="icon" src="./../../assets/landingPage/check.svg" class="img2"/>
+                    VIP customer support
+                </dt>
+                <dd id="section-5-description">
+                    Quick response time and upgraded support solutions will help you to
+                    get what you need, when you need it.
+                </dd>
+                <dt>
+                    <img alt="icon" src="./../../assets/landingPage/check.svg" class="img2"/>
+                    Improved billing options
+                </dt>
+                <dd id="section-5-description">
+                    One team - one payment method. You can now add a card on file that every
+                    team member can use.
+                </dd>
+                </dl>
+            </div>
+            <div class="col-md-6 text-right">
+                <img alt="Bootstrap Image Preview" src="./../../assets/landingPage/business-tool.png" class="section5-img"/>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+<!-- Section 8 Corousel -->
+<section id="section8">
+    <div id="section8carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+        <li id="section8-carousel-indicator" data-target="#section8carousel" data-slide-to="0" class="active"></li>
+        <li id="section8-carousel-indicator"  data-target="#section8carousel" data-slide-to="1"></li>
+        <li id="section8-carousel-indicator" data-target="#section8carousel" data-slide-to="2"></li>
+        </ul>
+        <!-- The slideshow -->
+        <div class="carousel-inner" id="section8-carousel-inner">
+        <div class="carousel-item active">
+            <img src="./../../assets/landingPage/corousel/slider1.png" alt="Los Angeles" width="100%" height="300px">
+            <div class="carousel-caption text-left" id="section8-carousel-caption">
+                <h3>Time to know marketing strategy</h3>
+                <p> Master marketing with ProHub learn new Course! </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./../../assets/landingPage/corousel/slider2.png" alt="Chicago" width="100%" height="300px">
+            <div class="carousel-caption text-left" id="section8-carousel-caption">
+                <h3>Time to know marketing strategy</h3>
+                <p> Master marketing with ProHub learn new Course! </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./../../assets/landingPage/corousel/slider3.png" alt="New York" width="100%" height="300px">
+            <div class="carousel-caption text-left" id="section8-carousel-caption">
+                <h3>Time to know marketing strategy</h3>
+                <p> Master marketing with ProHub learn new Course! </p>
+            </div>
+        </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#section8carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#section8carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+<div style="clear:both"></div>
+<!-- Section 10 Prohub guides -->
+<section id="section10">
+    <div class="container m-auto">
+        <div class="row m-auto">
+            <div class="col-md-10 text-center">
+                <h2 id="section10-title">ProHub's Guides</h2>
+            </div>
+            <div class="col-md-2 text-center"  id="see-more-guides">
+                <a href="#" > See more Guides ></a>
+            </div>
+        </div>
+        <div class="row" id="section10-cards">
+            <div class="col-md-4">
+                <div class="card-section10">
+                    <img src="./../../assets/landingPage/prohub_guides1.png" class="section10-img"/>
+                        <div class="card-body">
+                            <h5 class="section10-card-subtitle"> DIGITAL MARKETING GUIDES </h5>
+                            <h5 class="section10-card-text">
+                                Start an online business and work from home
+                            </h5>
+                        <p class="section10-card-text2">
+                            A complete guide to starting a small business online
+                        </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-section10">
+                    <img src="./../../assets/landingPage/prohub_guides2.png" class="section10-img"/>
+                        <div class="card-body">
+                            <h5 class="section10-card-subtitle"> DIGITAL MARKETING GUIDES </h5>
+                            <h5 class="section10-card-text">
+                                Start an online business and work from home
+                            </h5>
+                        <p class="section10-card-text2">
+                            A complete guide to starting a small business online
+                        </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-section10">
+                    <img src="./../../assets/landingPage/prohub_guides3.png" class="section10-img"/>
+                        <div class="card-body">
+                            <h5 class="section10-card-subtitle"> DIGITAL MARKETING GUIDES </h5>
+                            <h5 class="section10-card-text">
+                                Start an online business and work from home
+                            </h5>
+                        <p class="section10-card-text2">
+                            A complete guide to starting a small business online
+                        </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="clear:both"></div>
+
+<!-- *************  Footer  ************* -->
+<section class="footer">
+    <div class="container m-auto">
+        <div class="row logo-row">
+            <div class="col-md-8">
+               <img src="./../../assets/landingPage/ProHub-Logo.svg" width="150px" height="80px"/>
+            </div>
+            <div class="col-md-4 text-right">
+                <img id="footer-socialicon" src="./../../assets/landingPage/facebook.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/instagram.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/linkedin.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/youtube.svg" width="15px" height="15px"/>
+            </div>
+        </div>
+        <div class="row footer-content">
+            <div class="col-md-2" id="footer-list">
+                <h6> Join ProHub </h6>
+                <div class="footer-list-p">
+                <p><a id="footera" href="#">As a Professionals</a></p>
+                <p><a id="footerclient" href="#">As a Clients</a></p>
+                </div>
+           </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>About</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Terms & Conditions</a></p>
+                    <p><a  id="footerclient" href="#">Privacy Policy</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Support</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Help & Support</a></p>
+                    <p><a id="footerclient" href="#">As a Clients</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Get our app</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Download IOS App</a></p>
+                    <p><a id="footerclient" href="#">Download Android App</a></p>
+                    </div>
+            </div>
+            <div class="col-md-4" id="footer-list">
+                <h6>Contact Us</h6>
+                <div class="input-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your Email..."/>
+                    <button type="button" class="btn" id="submit-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="last-section bottom-row">
+  <div class="container m-auto">
+    <div class="row">
+        <div class="col-md-5">
+           <h6> ©ProHub International Ltd. 2020 </h6>
+        </div>
+        <div class="col-md-7  text-right">
+          <h6>Report Site Issues | FAQ | Privacy Policy | Complaint Policy | Cancellation Policy</h6>
+        </div>
+    </div>
+  </div>
+  </section>

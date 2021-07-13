@@ -1,0 +1,79 @@
+.expert-container {
+  display: flex;
+  flex-direction: column;
+
+  .expert-header {
+    font: normal normal bold 20px/35px Libre Franklin;
+    letter-spacing: -0.5px;
+    color: #444853;
+    width: 100%;
+  }
+
+  .expert-content {
+    height: 280px;
+    font: normal normal medium 16px/19px Libre Franklin;
+    letter-spacing: 0px;
+    color: #444853;
+    padding: 25px 0px;
+    width: 100%;
+
+    .mat-radio-group {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      width: 390px;
+      .option {
+        align-items: center;
+        border: 1px solid #bdbdbd;
+        display: flex;
+        flex-direction: column;
+        height: 135px;
+        padding-top: 5px;
+        width: 180px;
+
+        .mat-radio-button {
+          align-self: flex-end;
+        }
+
+        > span {
+          font-size: 40px;
+        }
+
+        > div {
+          text-align: center;
+          font: normal normal medium 16px/19px Libre Franklin;
+          letter-spacing: 0px;
+          color: #444853;
+          word-wrap: normal;
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .control {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font: normal normal 500 16px Libre Franklin;
+    letter-spacing: 0px;
+    padding: 10px;
+    color: #212121;
+    width: 550px;
+  }
+
+  .label {
+    text-align: left;
+    font: normal normal 600 14px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+
+  .expert-footer {
+    border-top: 1px solid #bdbdbd;
+    font: normal normal 600 14px/52px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+    width: 100%;
+  }
+}

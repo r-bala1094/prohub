@@ -1,0 +1,207 @@
+<!-- ************** NAVBAR ***************** -->
+<section id="navbar">
+    <div class="container m-auto">
+        <div class="row">
+            <div class="col-sm col-md-12">
+                <nav class="navbar navbar-expand-sm">
+                    <!-- navbar-brand -->
+                    <a class="navbar-brand mr-auto" routerLink="/"> <img src="../../assets/landingPage/ProHub-Logo.svg"/> </a>
+    
+                    <!-- toogler button for small screen -->
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburgerMenu">
+                        <span class="navbar-toggler-icon m-auto"><img src="../../assets/contactus/menu-button.png" width="15px"/></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="hamburgerMenu"> 
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ml-2">     
+                                <a routerLink="/" class="nav-link">Home</a> 
+                            </li>
+                            <li class="nav-item ml-2">
+                                <a class="nav-link" routerLink="/howitworks">How it Works</a>  
+                            </li>
+                            <li class="nav-item ml-2"> 
+                                <a class="nav-link" routerLink="/about">About Us</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <a class="nav-link" routerLink="/contactus">Contact Us</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <a class="nav-link active" routerLink="/feedbackform">Feedback</a> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <button class="btn btn-login" routerLink="/auth/login">LOGIN</button> 
+                            </li>
+                            <li class="nav-item ml-2">    
+                                <button class="btn btn-signup" routerLink="/auth">SIGNUP</button> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </section>
+<!--navbar-end-->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm col-md">
+            <form class="form m-auto mt-5">
+                <div class="container mt-5">
+                  <div class="row mt-5">
+                    <div class="col-sm col-md">
+                        <h4><b>GIVE FEEDBACK</b></h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm col-md">
+                            <p class="form-p">We are always looking to improve our platform and love receiving your feedback and improvements suggestions. We will reward the best ideas and feedback. Thank You !</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm col-md-6">
+                            <mat-form-field appearance="outline" class="form-field">
+                                <mat-label>Name</mat-label>
+                                <input matInput placeholder="Enter your name"required>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm col-md-6">
+                            <mat-form-field appearance="outline" class="form-field">
+                                <mat-label>Surname</mat-label>
+                                <input matInput placeholder="Enter your surname"required>
+                              </mat-form-field>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm col-md-6">
+                                <mat-form-field appearance="outline"  class="form-field">
+                                    <mat-label>Enter your email</mat-label>
+                                    <input matInput placeholder="pat@example.com" formControl="email" required>
+                                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                                  </mat-form-field>
+                            </div>
+                            <div class="col-sm col-md-6">
+                                <mat-form-field appearance="outline" class="form-field">
+                                    <mat-label>Phone no.</mat-label>
+                                    <input matInput placeholder="Your number"required>
+                                  </mat-form-field>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-col-md">
+                                    <label id="example-radio-group-label"><b>What does your feedback relate to ?</b></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="co-sm col-md">
+                                <mat-radio-group
+                                aria-labelledby="example-radio-group-label"
+                                 class="example-radio-group"
+                                 (ngModel)="feedback">
+                              <mat-radio-button class="example-radio-button" *ngFor="let feed of feeds" [value]="feed">
+                            {{feed.name}}<br/>
+                         </mat-radio-button>
+                         </mat-radio-group>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm col-md-12">
+                                    <mat-form-field id="text" appearance="outline" class="w-100">
+                                        <mat-label>Feedback / Suggestion</mat-label>
+                                        <textarea matInput class="w-100"></textarea>
+                                      </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm col-md">
+                                    <form>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlFile1"><b>Example file input</b></label>
+                                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-col-md mt-3 text-right ">
+                                    <button mat-raised-button color="primary">Submit</button>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+             </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+ <!-- *************  Footer  ************* -->
+
+<section class="footer">
+    <div class="container m-auto">
+        <div class="row logo-row">
+            <div class="col-md-8">
+               <img src="./../../assets/landingPage/ProHub-Logo.svg" width="150px" height="80px"/>
+            </div>
+            <div class="col-md-4 text-right">
+                <img id="footer-socialicon" src="./../../assets/landingPage/facebook.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/instagram.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/linkedin.svg" width="15px" height="15px"/>
+                <img id="footer-socialicon" src="./../../assets/landingPage/youtube.svg" width="15px" height="15px"/>
+            </div>
+        </div>
+        <div class="row footer-content">
+            <div class="col-md-2" id="footer-list">
+                <h6> Join ProHub </h6>
+                <div class="footer-list-p">
+                <p><a id="footera" href="#">As a Professionals</a></p>
+                <p><a id="footerclient" href="#">As a Clients</a></p>
+                </div>
+           </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>About</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Terms & Conditions</a></p>
+                    <p><a  id="footerclient" href="#">Privacy Policy</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Support</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Help & Support</a></p>
+                    <p><a id="footerclient" href="#">As a Clients</a></p>
+                    </div>
+            </div>
+            <div class="col-md-2" id="footer-list">
+                <h6>Get our app</h6>
+                <div class="footer-list-p">
+                    <p><a id="footera" href="#">Download IOS App</a></p>
+                    <p><a id="footerclient" href="#">Download Android App</a></p>
+             </div>
+            </div>
+            <div class="col-md-4" id="footer-list">
+                <h6>Contact Us</h6>
+                <div class="input-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your Email..."/>
+                    <button type="button" class="btn" id="submit-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="last-section bottom-row">
+  <div class="container m-auto">
+    <div class="row">
+        <div class="col-md-5">
+           <h6> ©ProHub International Ltd. 2020 </h6>
+        </div>
+        <div class="col-md-7  text-right">
+          <h6>Report Site Issues | FAQ | Privacy Policy | Complaint Policy | Cancellation Policy</h6>
+        </div>
+    </div>
+  </div>
+  </section>
+

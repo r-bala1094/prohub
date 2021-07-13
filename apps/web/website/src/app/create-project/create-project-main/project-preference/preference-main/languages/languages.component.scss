@@ -1,0 +1,42 @@
+.controls {
+  * {
+    margin-right: 10px;
+  }
+}
+
+.selected-language {
+  align-items: center;
+  border: 1px solid #f5f5f5;
+  display: flex;
+  height: 36px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  * {
+    margin-right: 10px;
+  }
+
+  .material-icons {
+    font-size: 12px;
+    width: 5%;
+  }
+
+  .language {
+    text-align: left;
+    font: normal normal normal 14px/52px Libre Franklin;
+    letter-spacing: 0px;
+    color: #5a6276;
+    width: 25%;
+  }
+
+  .progress {
+    width: 50%;
+  }
+
+  .level {
+    font: normal normal normal 8px/52px Libre Franklin;
+    letter-spacing: 0px;
+    color: #5a6276;
+    width: 20%;
+  }
+}

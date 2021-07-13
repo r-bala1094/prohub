@@ -1,0 +1,63 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "prohubnx",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "web-website": {
+      "tags": ["type:app", "platform:web"]
+    },
+    "web-website-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web-website"]
+    },
+    "server-api": {
+      "tags": ["type:app", "platform:server"]
+    },
+    "interfaces": {
+      "tags": ["type:lib", "scope:shared"]
+    },
+    "web-server-test": {
+      "tags": ["type:app", "platform:server"]
+    },
+    "web-material": {
+      "tags": ["scope:web", "type:lib-material"]
+    },
+    "web-account-type": {
+      "tags": ["scope:web", "type:lib-account-type"]
+    },
+    "web-common-ui": {
+      "tags": ["scope:web", "type:lib-common-ui"]
+    },
+    "util": {
+      "tags": ["scope:shared", "type:lib-util"]
+    },
+    "server": {
+      "tags": ["scope:server", "type:lib-server"]
+    },
+    "database-database-schema": {
+      "tags": ["scope:server", "lib:lib-server"]
+    },
+    "constants": {
+      "tags": ["scope:shared", "lib:lib-constants"]
+    },
+    "server-automations": {
+      "tags": ["type:app", "platform:server"]
+    }
+  }
+}

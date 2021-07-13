@@ -1,0 +1,67 @@
+  <!--Header-->
+  <section class="navigation-bar">
+    <div class="container m-auto">
+      <div class="row">
+        <div class="col-md">
+          <div class="navbar">
+            <div class="navbar-brand">
+              <img src="../../../../assets/landingPage/ProHub-Logo.svg" alt="logo.svg" width="120px" (click)="navigateTo('/')">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- menu bar -->
+ <div class="expertise-container">
+  <div class="menu-bar-1">
+    <a class="menu-bar-content" routerLink="" class="col" align="center">Create Your account</a>
+  </div>
+  <div class="menu-bar-2">
+    <a class="menu-bar-content" routerLink="../" class="col" align="center">Exit signUp progress</a>
+  </div>
+   <!-- account type options -->
+  <b class="main-section-1">
+    Select from option below:
+  </b>
+  <div class="main-section-2" (click)="navigateTo('/auth/signup')">
+    <div class="logo">
+      <img src="./../../../assets/signUp/Looking for Expertise.png" style="height: 82px; width: 78px;">
+    </div>
+    <div class="expertise-content-box">
+      <p class="expertise-heading">
+        I'm looking for expertise
+      </p>
+      <p class="expertise-content">
+        Connect with qualified experts. Ask questions, Complete work seamlessly.
+      </p>
+    </div>
+  </div>
+  <div class="main-section-3" (click)="navigateTo('/auth/signup')">
+    <div class="logo">
+      <img src="./../../../assets/signUp/Provide Expertise.png" style="height: 82px; width: 78px;">
+    </div>
+    <div class="expertise-content-box">
+      <p class="expertise-heading">
+        I'm looking to provide expertise
+      </p>
+      <p class="expertise-content">
+        Join our community of experts. Access clients and tools. Do the best work of your life and earn a living.
+      </p>
+    </div>
+  </div>
+   <!-- already account exist -->
+  <div class="account-exist">
+    <div class="account-exist-text">
+      <span>Already have a ProHub's Account?</span>
+    </div>
+    <div class="account-exist-login">
+      <button mat-raised-button [routerLink]="routerLinkVariabletologin">Log in</button>
+    </div>
+  </div>
+ </div>
+ <div class="prohub-footer">
+ </div>
+ <!-- footer -->
+  <!-- add the component for lib  -->
+

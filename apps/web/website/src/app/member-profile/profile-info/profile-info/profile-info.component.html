@@ -1,0 +1,50 @@
+<div class="profile-info-container">
+  <div class="header">
+    Profile Info
+  </div>
+  <div class="profile-info-content">
+    <div class="profile-info-input">
+      <label
+        class="image-container"
+        for="profilePicInput">
+        <img *ngIf= " profilePic !== '' " [src]= profilePic class="profile-pic">
+        <span *ngIf= " profilePic === '' "
+          class="material-icons outlined"
+          style="color:#808080;">
+          photo_camera
+        </span>
+        <div *ngIf= " profilePic === '' " class="click-text">Click to add a Profile photo</div>
+      </label>
+      <input id="profilePicInput" type='file' accept="image/*" (change)="onSelectFile($event.target)">
+      <div class="name">
+        <label for="first-name">
+          <b>First Name *</b>
+        </label><br/>
+        <input [(ngModel)]="firstName" id="first-name">
+      </div>
+      <div class="name">
+        <label for="sur-name">
+          <b>Sur Name</b>
+        </label><br/>
+        <input [(ngModel)]="lastName" id="sur-name">
+      </div>
+    </div>
+    <div class="profile-info-text">
+      <h5>
+        <span class="material-icons outlined" style="color:#3F63C8;">lightbulb</span>
+        Make your profile stand out
+      </h5>
+      <p>Your picture, name, and tagline are your first impression with clients. immediately establish your credibility by including details about your professional experience and adding a recent, high-resolution photo. We've seen that experts with a profile photo are 30% more likely to invited to projects. Click here to see an example</p>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+    <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')"
+      [disabled]= "firstName === '' ">Next</button>
+  </div>
+</div>

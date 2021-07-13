@@ -1,0 +1,41 @@
+<section>
+    <div class="d-flex justify-content-center my-3">
+        <ng-container *ngIf="profilePic; else elseBlock">
+            <img [src]="profilePic" class="profile-pic">
+        </ng-container>
+        <ng-template #elseBlock>          
+            <span class="material-icons profile-icon">
+                account_circle
+            </span>
+        </ng-template>
+        <div class="d-flex align-items-end">
+            <span class="edit-icon clickable">
+                <span class="material-icons">
+                    edit
+                </span>
+            </span>
+        </div>
+    </div>
+    <form class="mb-3 mt-4 form-container" [formGroup]="profileDetails">
+        <div class="d-flex justify-content-between">
+            <mat-form-field appearance="outline" class="col-6">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-6">
+                <mat-label>Sur Name</mat-label>
+                <input matInput placeholder="Sur Name" formControlName="surName">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" class="col-12">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+        </div>
+    </form>
+    <div class="col-12 py-4">
+        <button mat-raised-button [disabled]="!profileDetails.valid" color="primary" (click)="onUpdateClick()">UPDATE</button>
+        <span class="cancel-btn ml-5 clickable" (click)="onCancelClick()">Cancel</span>
+    </div>
+</section>

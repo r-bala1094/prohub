@@ -1,0 +1,22 @@
+<div class="question p-5 mt-4">
+    <form [formGroup]="titleForm">
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label> Question Title </mat-label>
+            <input
+                required
+                matInput
+                formControlName="title"
+                placeholder="What is the most cost effective case to build house?"
+            />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Background Information</mat-label>
+            <textarea 
+                required
+                formControlName="description"
+                matInput placeholder="Please insert relevant information that will enable professionals to answer your question most effectively...."></textarea>
+        </mat-form-field>
+    </form>
+
+    <p class="mt-5">Disclaimer : Responses provided are preliminary opinions based on limited information and cannot be relied upon. if detailed responses or work is required, clients are advised to engage the professionals via our platform.</p>
+</div>

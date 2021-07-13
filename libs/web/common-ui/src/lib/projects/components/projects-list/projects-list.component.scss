@@ -1,0 +1,29 @@
+
+$selected-text-color: #3f63c833;
+$selected-primary-color: #3f63c8;
+$selected-alert-color: #c71919;
+$selected-footer-color: #444853;
+$text-color-grey :#B2B7C4;
+
+.card {
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+}
+
+.ask-question {
+    background-color: #f7f7f7;
+    color: $selected-footer-color;
+    font-weight: bold;
+}
+
+.document-button {
+    background-color: #fff;
+    border: solid 1px $selected-primary-color;
+    font-weight: bold;
+    color: $selected-footer-color;
+}
+
+.track-project {
+    background-color: $selected-primary-color;
+    color: #fff;
+    font-weight: bold;
+}

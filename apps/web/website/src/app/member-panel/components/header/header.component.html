@@ -1,0 +1,167 @@
+ <!-- *************** FIXED NAVBAR ****************** -->
+
+ <section id="navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-sm">
+                    <!-- navbar-brand -->
+                    <a routerLink="/"><img class="navbar-brand"> <img src="../../../../assets/prohub logo 2.png" height="60px"/></a>
+    
+                    <!-- toogler button for small screen -->
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburgerMenu">
+                        <span class="navbar-toggler-icon m-auto"> <i class="fas fa-bars"></i></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="hamburgerMenu"> 
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item m-auto">     
+                                <a class="nav-link" routerLink="/member" routerLinkActive="active" routerLinkActiveOptions="{isActive: true}">Find Projects</a> 
+                            </li>
+                            <li class="nav-item m-auto">
+                                <a class="nav-link" routerLink="/member/my-projects" routerLinkActive="active">My Projects</a>  
+                            </li>
+                            <li class="nav-item m-auto"> 
+                                <a href="#" class="nav-link"  routerLinkActive="active">Members</a> 
+                            </li>
+                            <li class="nav-item m-auto"> 
+                                <a href="#" class="nav-link"  routerLinkActive="active">Packages</a> 
+                            </li>
+    
+                            <!-- Navbar Reports  dropdown -->
+                            <li class="nav-item dropdown m-auto">
+                                <a href="#" class="nav-link dropdown-toggle"  routerLinkActive="active" id="reportDrop" data-toggle="dropdown">
+                                    Reports
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-center" id="reportDrop-menu">   <!-- dropdown Menu -->
+                                    <a href="#" class="dropdown-item">My Transactions<i class="fas fa-chevron-right float-right"></i> </a>
+                                </div>
+                            </li>
+    
+                            <!-- Navbar Learn  dropdown -->
+                            <li class="nav-item dropdown m-auto">
+                                <a href="#" class="nav-link dropdown-toggle" id="learnDrop"  routerLinkActive="active" data-toggle="dropdown">
+                                    Learn
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-center" id="learnDrop-menu">   <!-- dropdown Menu -->
+                                    <a href="#" class="dropdown-item">Learn  <i class="fas fa-chevron-right float-right m-auto"></i> </a>
+                                    <a href="#" class="dropdown-item">Guides  <i class="fas fa-chevron-right float-right m-auto"></i> </a>
+                                    <a href="#" class="dropdown-item">Blogs  <i class="fas fa-chevron-right float-right m-auto"></i> </a>
+                                </div>
+                            </li>
+    
+                            <li class="nav-item m-auto">    
+                                <a href="#" class="nav-link"  routerLinkActive="active">Community</a> 
+                            </li>
+                            
+                            <!-- Navbar Message  dropdown -->
+                            <li class="nav-item dropdown m-auto">
+                                <a href="#" class="nav-link"  routerLinkActive="active">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                            
+                            <!-- Navbar Notification  dropdown -->
+                            <li class="nav-item dropdown m-auto">
+                                <a href="" class="nav-link" id="notificationDrop" data-toggle="dropdown">
+                                    <i class="fas fa-bell" id="notification-icon"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-right" id="notificationDrop-menu">
+                                    <div>
+                                        <h5><strong>Notifications</strong></h5>
+                                    </div>  
+                                    <!-- items -->                                            
+                                    <div class="dropdown-item d-flex m-auto">
+                                        <div class="p-2">
+                                            <img src="https://i.pravatar.cc/150?img=49 m-auto" class="rounded-circle float-left" width="40px">
+                                        </div>
+                                        <div class="p-2 flex-grow-1">
+                                            <p class="notification-text">Amanda send you a <br> invitation for job id #123</p>
+                                            <button class="btn mr-1" id="accept-button">Accept</button>
+                                            <button class="btn" id="reject-button">Reject</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item d-flex m-auto">
+                                        <div class="p-2">
+                                            <img src="https://i.pravatar.cc/150?img=49 m-auto" class="rounded-circle float-left" width="40px">
+                                        </div>
+                                        <div class="p-2 flex-grow-1">
+                                            <p class="notification-text">Amanda send you a <br> invitation for job id #123</p>
+                                            <button class="btn mr-1" id="accept-button">Accept</button>
+                                            <button class="btn" id="reject-button">Reject</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item d-flex m-auto">
+                                        <div class="p-2">
+                                            <img src="https://i.pravatar.cc/150?img=49 m-auto" class="rounded-circle float-left" width="40px">
+                                        </div>
+                                        <div class="p-2 flex-grow-1">
+                                            <p class="notification-text">Amanda send you a <br> invitation for job id #123</p>
+                                            <button class="btn mr-1" id="accept-button">Accept</button>
+                                            <button class="btn" id="reject-button">Reject</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item d-flex m-auto">
+                                        <div class="p-2">
+                                            <img src="https://i.pravatar.cc/150?img=49 m-auto" class="rounded-circle float-left" width="40px">
+                                        </div>
+                                        <div class="p-2 flex-grow-1">
+                                            <p class="notification-text">Amanda send you a <br> invitation for job id #123</p>
+                                            <button class="btn mr-1" id="accept-button">Accept</button>
+                                            <button class="btn" id="reject-button">Reject</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item d-flex m-auto">
+                                        <div class="p-2">
+                                            <img src="https://i.pravatar.cc/150?img=49 m-auto" class="rounded-circle float-left" width="40px">
+                                        </div>
+                                        <div class="p-2 flex-grow-1">
+                                            <p class="notification-text">Amanda send you a <br> invitation for job id #123</p>
+                                            <button class="btn mr-1" id="accept-button">Accept</button>
+                                            <button class="btn" id="reject-button">Reject</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <!-- Navbar UserProfile  dropdown -->
+                            <li class="nav-item dropdown m-auto">
+                                <a href="#" class="nav-link" id="profileDrop" data-toggle="dropdown">
+                                    <img src="https://i.pravatar.cc/150?img=47 m-auto" class="rounded-circle userprofile" width="40px">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-right" id="profileDropMenu">
+                                    <div class="dropdown-item">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <img src="https://i.pravatar.cc/150?img=47" class="rounded-circle"  id="profileDropMenu-UserImage" width="60px">
+                                            </div>
+                                            <div class="p-2 flex-grow-1">
+                                                <h5  id="profileDropMenu-userName">Anna Marie</h5>
+                                                <p id="profileDropMenu-userType">Individual</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <button class="btn btn-block" id="switchType">Switch to Client</button>
+                                    </div>
+                                    <a href="#" class="dropdown-item" id="profileDrop-myprofile">
+                                        <i class="fas fa-file" id="profileDropIcon"> </i> <span id="icon-text">My Blogs</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" id="profileDrop-myprofile">
+                                        <i class="fas fa-edit" id="profileDropIcon"> </i> <span id="icon-text">Profile</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" id="profileDrop-share">
+                                        <i class="fas fa-share-alt" id="profileDropIcon"> </i> <span id="icon-text">Invite Other</span> 
+                                    </a>
+                                    <a href="#" class="dropdown-item" id="profileDrop-signout">
+                                        <i class="fas fa-sign-out-alt" id="profileDropIcon"> </i> <span id="icon-text">Signout</span> 
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>

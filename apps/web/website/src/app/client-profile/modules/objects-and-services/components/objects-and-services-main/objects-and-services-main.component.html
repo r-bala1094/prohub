@@ -1,0 +1,37 @@
+<section>
+    <header class="d-flex justify-content-between align-items-center col-12">
+        <span class="header-text">Objectives</span>
+        <span class="edit-icon clickable" *ngIf="!isEditObjectives" (click)="isEditObjectives = !isEditObjectives">
+            <span class="material-icons">
+                edit
+            </span>
+        </span>
+    </header>
+    <mat-divider class="mb-2"></mat-divider>
+    <ng-container *ngIf="isEditObjectives; else elseBlock">
+        <prohub-objects-edit [details]="objectivesDetails" (toggleEditMode)="toggleObjectives()"></prohub-objects-edit>
+    </ng-container>
+    <ng-template #elseBlock>
+        <prohub-objects-view [details]="objectivesDetails"></prohub-objects-view>
+    </ng-template>
+</section>
+
+<div class="separator"></div>
+
+<section>
+    <header class="d-flex justify-content-between align-items-center col-12">
+        <span class="header-text">Services</span>
+        <span class="edit-icon clickable" *ngIf="!isEditServices" (click)="isEditServices = !isEditServices">
+            <span class="material-icons">
+                edit
+            </span>
+        </span>
+    </header>
+    <mat-divider class="mb-2"></mat-divider>
+    <ng-container *ngIf="isEditServices; else elseBlockService">
+        <prohub-services-edit [details]="servicesDetails" (toggleEditMode)="toggleServices()"></prohub-services-edit>
+    </ng-container>
+    <ng-template #elseBlockService>
+        <prohub-services-view [details]="servicesDetails"></prohub-services-view>
+    </ng-template>
+</section>

@@ -1,0 +1,91 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm col-md mt-3 p-3 ">
+                <h3><b>Location</b></h3>
+            </div>
+        </div>
+        <hr/>
+    </div>
+    <form class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class= "col-sm-12 col-md">
+                    <h6><b>Set Timezone</b></h6>
+                     <mat-form-field appearance="outline" class="w-100">
+                         <mat-label>Select an option</mat-label>
+                        <mat-select disableRipple>
+                          <mat-option value="1">Option 1</mat-option>
+                          <mat-option value="2">Option 2</mat-option>
+                          <mat-option value="3">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md">
+                    <h6><b>Address Line 1</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Address Line 1</mat-label>
+                        <input matInput placeholder="855 Paradise Court">
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md"><h6><b>Address Line 2</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Address Line 2</mat-label>
+                        <input matInput placeholder="855 Paradise Court">
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6><b>Country</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Select Country</mat-label>
+                       <mat-select disableRipple>
+                         <mat-option (ngModel)="CountryName" *ngFor="let country of countries">{{country.name}}</mat-option>
+                       </mat-select>
+                     </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h6><b>State</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Select State</mat-label>
+                       <mat-select disableRipple>
+                         <mat-option (ngModel)="StateName" *ngFor="let state of states">{{state.name}}</mat-option>
+                       </mat-select>
+                     </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6><b>City</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Outline form field</mat-label>
+                        <input matInput placeholder="Placeholder">
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h6><b>ZIP Code</b></h6>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Outline form field</mat-label>
+                        <input matInput placeholder="Placeholder">
+                      </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+        <hr/>   
+</section>
+<section>
+    <div class="container mb-5 mt-2">
+        <div class="row">
+            <div class="col-sm col-md">
+                <button mat-raised-button class="ml-2 back" (click)="handleMovePage('back')">BACK</button>
+                <button mat-raised-button color="primary" class="ml-2 next" (click)="handleMovePage('next')">NEXT</button>
+            </div>
+        </div>
+    </div>
+</section>

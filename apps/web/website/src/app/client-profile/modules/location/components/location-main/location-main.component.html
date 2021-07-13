@@ -1,0 +1,17 @@
+<section>
+    <header class="d-flex justify-content-between align-items-center col-12">
+        <span class="header-text">Location</span>
+        <span class="edit-icon clickable" *ngIf="!isEdit" (click)="isEdit = !isEdit">
+            <span class="material-icons">
+                edit
+            </span>
+        </span>
+    </header>
+    <mat-divider class="mb-2"></mat-divider>
+    <ng-container *ngIf="isEdit; else elseBlock">
+        <prohub-location-edit [details]="locationDetails" (toggleEditMode)="toggleEdit()"></prohub-location-edit>
+    </ng-container>
+    <ng-template #elseBlock>
+        <prohub-location-view [details]="locationDetails"></prohub-location-view>
+    </ng-template>
+</section>

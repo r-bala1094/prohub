@@ -1,0 +1,48 @@
+<div class="education-container">
+  <div class="header">
+    Education and certification
+    <span (click)="formUpdateHandler('createNewForm', null)" class="material-icons outlined" color="primary">
+      add_circle
+    </span>
+  </div>
+  <div class="education-section">
+    <div *ngFor="let item of individualMemberSignupStateService.listOfeducationCertification; let i = index;" class="education-content">
+      <div class="border"></div>
+      <div class="content">
+        <p>{{item.courseCertificateTitle}}</p>
+        <p>{{item.schoolOrUniversity.universityName}}
+          <span>
+            ({{item.workedDur.startDate | date:'yyyy'}} -
+            <span *ngIf="item.workedDur.curentlyWorkedHere">Not passed yet</span>
+            <span *ngIf="! item.workedDur.curentlyWorkedHere">{{item.workedDur.endDate | date:'yyyy'}}</span>)
+          </span>
+        </p>
+      </div>
+      <div class="symbols">
+        <span (click)="formUpdateHandler('edit',i)" class="material-icons" color="primary">
+          edit
+        </span>
+        <span (click)="formUpdateHandler('delete',i)" class="material-icons" color="primary">
+          delete
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+      <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')">Next</button>
+  </div>
+</div>
+
+<div *ngIf="displayForm">
+  <prohub-education-form
+    [formValue]="FormDataToBeEdited"
+    [formCreateType]="formCreateType"
+    (formSubmissionData)=formSubmissionDataHandler($event)>
+  </prohub-education-form>
+</div>

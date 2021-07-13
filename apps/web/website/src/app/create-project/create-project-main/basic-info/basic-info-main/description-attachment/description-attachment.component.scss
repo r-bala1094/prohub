@@ -1,0 +1,83 @@
+.mat-form-field {
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.control {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 20px;
+  font: normal normal 500 16px Libre Franklin;
+  letter-spacing: 0px;
+  color: #212121;
+  height: 80px !important;
+  width: 550px;
+}
+
+.label {
+  text-align: left;
+  font: normal normal 600 14px Libre Franklin;
+  letter-spacing: 0px;
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+.hint {
+  font: normal normal 500 12px/52px Libre Franklin;
+  letter-spacing: 0px;
+  color: #808080;
+}
+.dropzone-wrapper {
+  width: 100%;
+}
+
+.dropzone {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 104px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 4px #a3a3a329;
+  border: 1px dashed #3f63c8;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  width: 100%;
+
+  .material-icons {
+    font-size: 36px;
+    color: #3f63c8;
+    margin-bottom: 10px;
+  }
+
+  .help-text {
+    font: normal normal normal 12px/15px Libre Franklin;
+    letter-spacing: 0px;
+
+    span {
+      color: #3f63c8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.file-list {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #0000001a;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  div {
+    width: 90%;
+    margin: 0px 10px;
+  }
+}
+
+.fileover {
+  border: 2px solid #3f63c8;
+  opacity: 0.5;
+}

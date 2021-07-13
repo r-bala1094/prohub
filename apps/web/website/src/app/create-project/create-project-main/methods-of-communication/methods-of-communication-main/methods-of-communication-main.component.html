@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Methods of Communication
+            <span>Step 4 of 7</span>
+        </div>
+        <div class="save-status">
+            {{isSaved ? 'Saved' : ''}}
+        </div>
+    </div>
+    <form [formGroup]="methodsInfo">
+        <div class="option">
+            <div>
+                <span class="material-icons">
+                    sms
+                </span>
+                    
+                Messaging
+            </div>
+            <mat-slide-toggle color="primary" formControlName="messaging"></mat-slide-toggle>
+        </div>
+        <div class="option">
+            <div>
+                <span class="material-icons">
+                    phone_in_talk
+                </span>
+                Audio 
+            </div>
+            <mat-slide-toggle color="primary" formControlName="audio"></mat-slide-toggle>
+        </div>
+        <div class="option">
+            <div>
+                <span class="material-icons">
+                    videocam
+                </span>
+                Video
+            </div>
+            <mat-slide-toggle color="primary" formControlName="video"></mat-slide-toggle>
+        </div>
+    </form>
+    <div class="footer">
+        <button mat-raised-button (click)="save()">Save</button>
+        <button mat-raised-button (click)="back()">Back</button>
+        <button mat-raised-button color="primary" (click)="next()">Next</button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<form [formGroup]="titleInfo">
+        <div class="label">Project Title</div>
+        <input matInput type="text" formControlName="projectTitle" class="title-input" placeholder="Your Project Title"/>
+        <div class="label">Start Date</div>
+        <div class="date-control">
+        <input
+        [max]="titleInfo.value.proposedCompletionDate" matInput [matDatepicker]="startpicker" (click)="startpicker.open()" formControlName="startDate" placeholder="Select Date">
+        <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+        <mat-datepicker #startpicker></mat-datepicker>
+        </div>
+        <div class="label">End Date</div>
+        <div class="date-control">
+        <input 
+        [min]="titleInfo.value.startDate"
+        matInput [matDatepicker]="endpicker" (click)="endpicker.open()" formControlName="proposedCompletionDate" placeholder="Select Date">
+        <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+        <mat-datepicker #endpicker></mat-datepicker>
+        </div>
+        <mat-radio-group class="d-flex flex-column"  color="primary" aria-label="Select an option" formControlName="approxProposedDuration">
+            <mat-radio-button value="1">Within a week</mat-radio-button>
+            <mat-radio-button value="2">Within 1 month</mat-radio-button>
+            <mat-radio-button value="3">Within 3 months</mat-radio-button>
+            <mat-radio-button value="4">Within 6 months</mat-radio-button>
+            <mat-radio-button value="5">More than 6 months</mat-radio-button>
+            <mat-radio-button value="6">I dont know</mat-radio-button>
+        </mat-radio-group>
+</form>

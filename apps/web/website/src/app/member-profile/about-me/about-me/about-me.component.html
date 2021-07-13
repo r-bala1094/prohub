@@ -1,0 +1,24 @@
+<div class="about-me-container">
+  <div class="header">
+    Tell us about yourself
+    <p>
+      Detail your experience and how you will add value to your clients. Use key phrases that will make it clear as to what you offer.
+    </p>
+  </div>
+  <div class="about-me-content">
+    <label for="about-me">
+      About (Short Intro about you)
+    </label><br/>
+    <textarea [(ngModel)]="aboutMeText" id="about-me"></textarea>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button            
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+    <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')"
+      [disabled]= "aboutMeText === '' ">Next</button>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<form [formGroup]="successInfo" class="d-flex flex-column">
+    <div class="d-flex flex-column control-wrap">
+        <div class="col-8">
+            <mat-label class="label">Project Success Score</mat-label>
+            <div class="slider-value">{{successInfo.value.successScore[0]}}% to {{successInfo.value.successScore[1]}}%</div>
+            <nouislider style="margin:0;" [config]="someKeyboardConfig" [min]="0" [max]="100" [step]="1" formControlName="successScore"></nouislider>
+            <div class="slider-label"><span>min%</span><span>max%</span></div>
+        </div>
+    </div>
+    <div class="d-flex control-wrap">
+    <div class="col-6">
+        <mat-label class="label">Earned Amount</mat-label>
+        <mat-radio-group class="d-flex flex-column"  color="primary" aria-label="Select an option" formControlName="earnedAmount">
+            <mat-radio-button value="1">Any Amount Earned</mat-radio-button>
+            <mat-radio-button value="2">$100+ earned</mat-radio-button>
+            <mat-radio-button value="3">$1k+ earned</mat-radio-button>
+            <mat-radio-button value="4">$10k+ earned</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div class="col-6">
+        <mat-label class="label">English Level</mat-label>
+        <mat-radio-group class="d-flex flex-column"  color="primary" aria-label="Select an option" formControlName="englishLevel">
+            <mat-radio-button value="1">Any Level</mat-radio-button>
+            <mat-radio-button value="2">Conversation Level</mat-radio-button>
+            <mat-radio-button value="3">Fluent or Better</mat-radio-button>
+            <mat-radio-button value="4">Native or Billingual</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+</form>

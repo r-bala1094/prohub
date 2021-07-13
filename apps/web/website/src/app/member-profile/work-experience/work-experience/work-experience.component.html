@@ -1,0 +1,49 @@
+<div class="work-experience-container">
+  <div class="header">
+    Work Experience
+    <span (click)="formUpdateHandler('createNewForm', null)" class="material-icons outlined" color="primary">
+      add_circle
+    </span>
+  </div>
+  <div class="work-exp-section">
+    <div *ngFor="let item of individualMemberSignupStateService.listOfWorkExperiences; let i = index;" class="work-exp-content">
+      <div class="border"></div>
+      <div class="content">
+        <p>{{item.title}}</p>
+        <p>{{item.companyName}}
+          <span>
+            ({{item.workedDur.startDate | date:'yyyy'}} -
+            <span *ngIf="item.workedDur.curentlyWorkedHere">Currently Working</span>
+            <span *ngIf="! item.workedDur.curentlyWorkedHere">{{item.workedDur.endDate | date:'yyyy'}}</span>)
+          </span>
+        </p>
+        <p>{{item.location.name}}</p>
+      </div>
+      <div class="symbols">
+        <span (click)="formUpdateHandler('edit',i)" class="material-icons" color="primary">
+          edit
+        </span>
+        <span (click)="formUpdateHandler('delete',i)" class="material-icons" color="primary">
+          delete
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+      <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')">Next</button>
+  </div>
+</div>
+
+<div *ngIf="displayForm">
+  <prohub-work-experience-form
+    [formValue]="FormDataToBeEdited"
+    [formCreateType]="formCreateType"
+    (formSubmissionData)=formSubmissionDataHandler($event)>
+  </prohub-work-experience-form>
+</div>

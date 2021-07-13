@@ -1,0 +1,94 @@
+<form [formGroup]="">
+<div class="hourly-container">
+    <div class="header">
+      Insert Hourly Rates
+    </div>
+
+    <!-- radio buttons -->
+    <div class="estimated-budget">
+        <div class="title">
+            Set your Hourly Rates
+        </div>
+
+        <!-- radio group -->
+        <mat-radio-group 
+            class="estimated-group" 
+            color="primary"
+            aria-label="Select an option"
+            formControlName="" >
+            <div class="estimated-option">
+                <mat-radio-button value="1">
+                    Choose the typical hourly range
+                </mat-radio-button>
+                <div class="help-text">
+                    The typical hourly rate is in between $24 - $25/hr for projects like yours.
+                </div>
+                <img src="../../../../assets/budget-chart.png" width="320px" height="130px">
+            </div>
+            <div class="estimated-option">
+                <mat-radio-button value="2">
+                    Set your own hourly range
+                </mat-radio-button>
+                <div class="currency mb-3 mt-3" > <!-- *ngIf="budgetInfo.value.estimatedBudget === '2'" -->
+                    <mat-label vlass="label">Select Currency</mat-label>
+                    <mat-select
+                        formControlName=""
+                        [compareWith]=""
+                        placeholder="--Select--" >
+                        <mat-option>
+                            Currency
+                        </mat-option>
+                    </mat-select>
+                </div>
+                <div class="min-max">
+                    <div class="control">
+                        <mat-label class="label">
+                            Min. Amount$
+                        </mat-label>
+                        <div>
+                            <input type="number"
+                                matInput
+                                formControlName=""
+                                placeholder="0.00" />
+                                <span>/hr</span>
+                        </div>
+                    </div>
+                    <div> <strong>To </strong></div>
+                    <div class="control">
+                        <mat-label class="label">
+                            Max. Amount$
+                        </mat-label>
+                        <div>
+                            <input type="number"
+                                matInput
+                                formControlName=""
+                                placeholder="0.00" />
+                                <span>/hr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-radio-group>
+        <div class="working-hours mb-3">
+            <mat-label class="label"><strong>Set maximum working hours</strong></mat-label>
+            <input type="number"
+                matInput
+                formControlName=""
+                placeholder="8.00" />
+        </div>
+    </div> <hr class="mt-2">
+
+    <div class="edit-section my-4">
+      <button mat-raised-button
+      class="back-button"
+      (click)="handleMovePage('back')"
+      >Back</button>
+      <button mat-raised-button
+        class="next-button"
+        color="primary"
+        (click)="handleMovePage('next')"
+        >Next</button>
+    </div>
+</div>
+</form>
+  

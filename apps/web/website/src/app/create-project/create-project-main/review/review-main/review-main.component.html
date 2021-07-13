@@ -1,0 +1,404 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Review and Submit
+        </div>
+        <button mat-raised-button color="primary" (click)="submitProject()">SUBMIT PROJECT</button>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            Basic Info
+            <span class="material-icons" (click)="goToBasicInfo()">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Project Title
+                </div>
+                <div class="value">
+                    {{projectTitle}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Start Date
+                </div>
+                <div class="value">
+                    {{startDate}}
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Proposed Completion Date
+                </div>
+                <div class="value">
+                    {{proposedCompletionDate}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            How many Employees you want to hire?
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Number of Employees you want to hire ?
+                </div>
+                <div class="value">
+                    {{numberOfExperts}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            About Categories & Skills
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Category
+                </div>
+                <div class="value">
+                    <mat-chip-list aria-label="Category selection">
+                        <mat-chip *ngFor="let category of categories" [selectable]="false"
+                        [removable]="false">{{category}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Sub Category
+                </div>
+                <div class="value">
+                    <mat-chip-list aria-label="Sub category selection">
+                        <mat-chip *ngFor="let subcategory of subcategories" [selectable]="false"
+                        [removable]="false">{{subcategory}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Skills
+                </div>
+                <div class="value">
+                    <mat-chip-list aria-label="Skill selection">
+                        <mat-chip *ngFor="let skill of skills" [selectable]="false"
+                        [removable]="false">{{skill}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            About Objectives & Deliverables
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Objectives
+                </div>
+                <div class="value">
+                    <mat-chip *ngFor="let objective of objectives" [selectable]="false"
+                    [removable]="false">{{objective}}</mat-chip>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Deliverables
+                </div>
+                <div class="value">
+                    <mat-chip-list aria-label="Deliverable selection">
+                        <mat-chip *ngFor="let deliverable of deliverables" [selectable]="false"
+                        [removable]="false">{{deliverable}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            Project Description & Attachments
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Description
+                </div>
+                <div class="value">
+                    {{briefDescription}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Documents & Attachments (6 Attachments)
+                </div>
+                <div class="value" *ngFor="let file of files">
+                    {{file.fileName}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Any Other Requirements (optional)
+                </div>
+                <div class="value">
+                    {{anyOtherRequirements}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            Screening Questions
+        </div>
+        <div class="questions" *ngFor="let ques of questions">
+            {{ques}}
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            Expert's Preferences
+        </div>
+        <div class="line" *ngIf="requireCoverLetterFromExperts">
+            <div class="value">
+                <span class="material-icons">
+                    done
+                </span>
+                Yes, require a cover letter from experts
+            </div>
+        </div>
+        <div class="line" *ngIf="requireLocalExpert">
+            <div class="value">
+                <span class="material-icons">
+                    done
+                </span>
+                Require Local Experts from Delhi, India
+            </div>
+        </div>
+        <div class="line" *ngIf="hireConsultantAndMemberBoth">
+            <div class="value">
+                <span class="material-icons">
+                    done
+                </span>
+                I want to hire Consultant & Members both
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="section-header">
+            Project's Preferences(optional)
+            <span class="material-icons" (click)="goToProjectPreference()">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Level Of Expertise
+                </div>
+                <div class="value">
+                    {{levelOfExpertise}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Location / Region :
+                </div>
+                <div class="value">
+                    {{location}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Project Success Score :
+                </div>
+                <div class="value">
+                    {{projectSuccessScore.min}}% - {{projectSuccessScore.max}}%
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Earned Amount
+                </div>
+                <div class="value">
+                    {{earnedAmount}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    English Level
+                </div>
+                <div class="value">
+                    {{englishLevel}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="lang-container">
+                <div class="label">
+                    Other Languages
+                </div>
+                <div class="selected-language col-6" *ngFor="let selLan of otherLanguage; let i=index">
+                    <div class="language">{{selLan.name}}</div>
+                    <mat-progress-bar class="progress" mode="determinate" value="{{getProgress(selLan.level)}}"></mat-progress-bar>
+                    <div class="level">{{selLan.level.split(' ')[0]}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="section-header">
+            Project's Privacy
+            <span class="material-icons" (click)="goToPrivacy()">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Project Privacy
+                </div>
+                <div class="value">
+                    <span class="material-icons">
+                        {{privacy.icon}}
+                    </span>
+                    {{privacy.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="section-header">
+            Method/s of Communication
+            <span class="material-icons" (click)="goToMethodsOfCommunication()">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Method/s of communication
+                </div>
+                <div class="value" *ngFor="let method of methods">
+                    <span class="material-icons">
+                        {{method.icon}}
+                    </span>
+                    {{method.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="section-header">
+            Budget
+            <span class="material-icons" (click)="goToBudget()">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Pay by
+                </div>
+                <div class="value">
+                    {{payBy}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Currency
+                </div>
+                <div class="value">
+                    {{currency}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Minimum Amount
+                </div>
+                <div class="value">
+                    ${{minAmount}} /hr
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Maximum Amount
+                </div>
+                <div class="value">
+                    ${{maxAmount}} /hr
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    Maximum working hours
+                </div>
+                <div class="value">
+                    {{workingHours}} hours
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="section-header">
+            Working's Preferences
+            <span class="material-icons">
+                edit
+            </span>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    How the work will be undertaken
+                </div>
+                <div class="value" *ngFor='let work of workWillUnderTaken'>
+                    {{work}}
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div>
+                <div class="label">
+                    In what capacity are you looking to employ professionals ?
+                </div>
+                <div class="value">
+                    {{empProffessional}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <button mat-raised-button (click)="submitProject()">SAVE & EXIT</button>
+        <button mat-raised-button color="primary" (click)="submitProject()">SUBMIT PROJECT</button>
+    </div>
+</div>

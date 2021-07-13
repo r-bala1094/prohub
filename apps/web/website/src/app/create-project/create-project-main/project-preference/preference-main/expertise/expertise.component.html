@@ -1,0 +1,25 @@
+<form [formGroup]="expertiseInfo">
+    <mat-radio-group class="d-flex flex-column" color="primary" aria-label="Level of Exterpise" formControlName="selectExpertise">
+        <mat-label class="label">Level of Expertise</mat-label>
+        <mat-radio-button value="1">Rising</mat-radio-button>
+        <mat-radio-button value="2">Intermediate</mat-radio-button>
+        <mat-radio-button value="3">Expert</mat-radio-button>
+        <mat-radio-button value="4">Rising & Intermediate Both</mat-radio-button>
+        <mat-radio-button value="5">Intermediate & Expert Both</mat-radio-button>
+        <mat-radio-button value="6">Rising & Expert Both</mat-radio-button>
+        <mat-radio-button value="7">All</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field>
+        <mat-label>Add Regions/Countries</mat-label>
+        <input type="text"
+          placeholder="Search Location"
+          matInput
+          formControlName="location"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let address of locations" [value]="address">
+            {{address}}
+          </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

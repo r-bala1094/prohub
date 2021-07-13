@@ -1,0 +1,33 @@
+<form [formGroup]="languageInfo">
+    <div class="controls">
+        <mat-form-field class="col-6">
+            <mat-label>Other Languages</mat-label>
+            <input type="text"
+              placeholder="Enter languages"
+              matInput
+              formControlName="language"
+              [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let lang of languages" [value]="lang.name">
+                {{lang.name}}
+              </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field  class="col-4">
+            <mat-select formControlName="level" [compareWith]="compareLevel" placeholder="Select Level">
+              <mat-option *ngFor="let level of levels" [value]="level.level">
+                {{level.level}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addLanguage()">ADD</button>
+    </div>
+    <div class="selected-language col-6" *ngFor="let selLan of selectedLanguages; let i=index">
+        <span class="material-icons" (click)="removeLanguage(i)">
+            close
+        </span>
+        <div class="language">{{selLan.language.name}}</div>
+        <mat-progress-bar class="progress" mode="determinate" value="{{getProgress(selLan.level.level)}}"></mat-progress-bar>
+        <div class="level">{{selLan.level.level.split(' ')[0]}}</div>
+    </div>
+</form>

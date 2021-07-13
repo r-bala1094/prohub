@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "material-module": ["libs/material-module/src/index.ts"],
+      "@prohub/common": ["libs/common/styles/src/index.ts"],
+      "@prohub/interfaces": ["libs/interfaces/src/index.ts"],
+      "@prohub/material": ["libs/web/material/src/index.ts"],
+      "@prohub/account-type": ["libs/web/account-type/src/index.ts"],
+      "@prohub/common-ui": ["libs/web/common-ui/src/index.ts"],
+      "@prohub/util": ["libs/util/src/index.ts"],
+      "@prohub/database-core": ["libs/server/src/index.ts"],
+      "@prohub/database-schema": ["libs/database/database-schema/src/index.ts"],
+      "@prohub/constants": ["libs/constants/src/index.ts"],
+      "@prohub/constants-core": ["libs/constants-core/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

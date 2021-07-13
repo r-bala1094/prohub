@@ -1,0 +1,86 @@
+$border-color: #E4E4E4;
+.profile-info-container {
+  border-left: 2px solid $border-color;
+  border-right: 2px solid $border-color;
+  min-height: 520px;
+  width: 100%;
+
+  .edit-section, .header {
+    align-items: center;
+    border-bottom: 2px solid $border-color;
+    border-top: 2px solid $border-color;
+    display: flex;
+    min-height: 90px;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  .header {
+    color: black;
+    font: normal normal bold 25px/35px Libre Franklin;
+  }
+  .back-button {
+   margin-right: 20px;
+  }
+}
+
+.profile-info-content {
+  height: inherit;
+  min-height: 340px;
+  padding: 40px 20px 0px 20px;
+
+  .profile-info-input {
+    display: flex;
+    height: 170px;
+
+    .image-container{
+      align-items: center;
+      background-color: #F5F5F5;
+      border: 1px dashed #BDBDBD;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      justify-content: center;
+      width: 120px;
+    }
+
+    .click-text {
+      color: #808080;
+      font-size: 12px;
+      height: 24px;
+      text-align: center;
+      width: 80px;
+    }
+
+    #profilePicInput{
+      display: none;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+    }
+
+    .name {
+      margin: 20px;
+
+      input {
+        box-shadow: 0px 1px 2px #0000001A;
+        border: 1px solid #BDBDBD;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .profile-info-text {
+    height: 170px;
+    width: 70%;
+    p {
+      font-size: 12px;
+      letter-spacing: 0px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Privacy
+            <span>Step 3 of 7</span>
+        </div>
+        <div class="save-status">
+            {{isSaved ? 'Saved' : ''}}
+        </div>
+    </div>
+    <div>
+    <mat-radio-group color="primary" aria-label="Select an option" [formControl]="privacy">
+        <div class="option">
+            <mat-radio-button value="1"></mat-radio-button>
+            <span class="material-icons">
+                public
+                </span>
+                <div> Pulic </div>
+                <div class="help-text"> Visible to anyone on the web</div>
+        </div>
+        <div class="option">
+        <mat-radio-button value="2"></mat-radio-button>
+        <span class="material-icons">
+            phone_iphone
+            </span>
+            <div> Platform </div>
+            <div class="help-text">Only visible to members of the platform</div>
+        </div>
+        </mat-radio-group>
+    </div>
+    <div class="footer">
+        <button mat-raised-button (click)="save()">Save</button>
+        <button mat-raised-button (click)="back()">Back</button>
+        <button mat-raised-button color="primary" (click)="next()">Next</button>
+    </div>
+</div>

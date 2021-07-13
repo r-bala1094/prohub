@@ -1,0 +1,30 @@
+# Owner is in Full Access no Restrictions
+
+# Maintainer Access
+apps/** @amitabh-anandcl
+libs/** @amitabh-anandcl
+tools/** @amitabh-anandcl
+
+CODEOWNERS @amitabh-anandcl
+
+gulpfile.js @amitabh-anandcl
+
+nx.json @amitabh-anandcl
+
+package.json @amitabh-anandcl
+package-lock.json @amitabh-anandcl
+workspace.json @amitabh-anandcl
+
+
+
+# Developer Access WEB
+
+apps/web/**  @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+
+libs/constants/** @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+libs/interfaces/** @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+libs/shared/** @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+libs/util/** @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+libs/web/** @r.bala1094 @gokulakrishnantn @Tanish_2001 @Tanya_2000 @vairavmahi @vidhyavasudevan7
+
+

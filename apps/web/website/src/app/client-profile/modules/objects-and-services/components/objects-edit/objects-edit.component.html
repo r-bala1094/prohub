@@ -1,0 +1,36 @@
+<section class="col-12">
+    <span class="section-info">
+        ProHub provides access to a large number of experts at your fingertips. Please select the objective and service/s that you need at this stage. You can always change these at a later date via your Profile.
+    </span>
+    <form [formGroup]="objectivesInfo" class="mt-3">
+        <mat-form-field class="chip-list w-100 mt-3">
+            <mat-label>Select Objectives</mat-label>
+            <mat-chip-list #chipList1 formControlName="objectivesChipList">
+            <mat-chip
+                *ngFor="let objective of objectivesInfo.get('objectivesChipList').value"
+                [selectable]="true"
+                removable="true"
+                (removed)="removeObjective(objective)">
+                {{objective}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input
+                #ObjectiveInputCtrl
+                placeholder="Search Objective..."
+                formControlName="objectiveInput"
+                [matAutocomplete]="auto1"
+                [matChipInputFor]="chipList1"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+            </mat-chip-list>
+            <mat-autocomplete #auto1="matAutocomplete" (optionSelected)="selectedObjective($event)">
+            <mat-option *ngFor="let objective of filterObjectives | async" [value]="objective">
+                {{objective}}
+            </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    <div class="col-12 py-4">
+        <button mat-raised-button color="primary" (click)="onUpdateClick()">UPDATE</button>
+        <span class="cancel-btn ml-5 clickable" (click)="onCancelClick()">Cancel</span>
+    </div>
+</section>

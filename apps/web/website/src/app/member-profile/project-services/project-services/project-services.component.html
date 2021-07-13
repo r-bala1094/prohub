@@ -1,0 +1,48 @@
+<div class="project-services-container">
+  <div class="header">
+    Project and Services
+    <span (click)="formUpdateHandler('createNewForm', null)" class="material-icons outlined" color="primary">
+      add_circle
+    </span>
+  </div>
+  <div class="project-services-section">
+    <div *ngFor="let item of individualMemberSignupStateService.listAllOfProjectServices; let i = index;" class="project-services-content">
+      <div class="border"></div>
+      <div class="content">
+        <p>{{item.projectAndServiceTitle}}</p>
+        <p>{{item.categories.category}}
+          <span>
+            ({{item.projectDuration.startDate | date:'yyyy'}} -
+            <span *ngIf="item.projectDuration.currentlyWorkingHere">Currently working here</span>
+            <span *ngIf="! item.projectDuration.currentlyWorkingHere">{{item.projectDuration.endDate | date:'yyyy'}}</span>)
+          </span>
+        </p>
+      </div>
+      <div class="symbols">
+        <span (click)="formUpdateHandler('edit',i)" class="material-icons" color="primary">
+          edit
+        </span>
+        <span (click)="formUpdateHandler('delete',i)" class="material-icons" color="primary">
+          delete
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+      <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')">Next</button>
+  </div>
+</div>
+
+<div *ngIf="displayForm">
+  <prohub-project-services-form
+    [formValue]="FormDataToBeEdited"
+    [formCreateType]="formCreateType"
+    (formSubmissionData)=formSubmissionDataHandler($event)>
+  </prohub-project-services-form>
+</div>

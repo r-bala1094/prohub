@@ -1,0 +1,160 @@
+
+
+/* **************NAVBAR************* */
+#navbar {
+    background-color: white;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    position:fixed;
+    top:0px;
+    z-index:1;
+}
+
+@media only screen and (max-width:480px) {
+    #navbar {
+        position:relative;
+    }
+}
+
+.nav-item {
+    padding-left:5px;
+}
+
+.nav-link {
+    color:#B2B7C4;
+}
+
+.nav-link:hover{
+    color:#3F63C8;
+}
+
+
+.nav-link.active {
+    color:#444853;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    color:#3F63C8;
+    font-size:25px;
+}
+
+.fas.fa-envelope, .fas.fa-bell {
+    font-size:20px;
+}
+
+/* <!-- Navbar UserProfile  dropdown --> */
+#profileDropMenu {
+    width:300px;
+    padding:12px 0px 0px 0px;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 12px;
+}
+
+#profileDropMenu-userName {
+    font-weight: bold;
+    font-size:20px;
+}
+
+#profileDropIcon {
+    font-size: 20px;
+}
+
+
+#profileDropMenu-userType {
+    font-weight: normal;
+    font-size:16px;
+    margin-top:-5px;
+    color: #B2B7C4;
+}
+
+#icon-text {
+    font-family: inherit;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#switchType{
+    font-weight: bold;
+    color:#3F63C8;
+}
+
+#profileDrop-myprofile, #profileDrop-share {
+    font-size:16px;
+    border-bottom: solid 1px rgb(236, 236, 236);
+    width: auto;
+    padding-bottom:15px;
+    padding-top:15px;
+}
+
+#profileDrop-signout {
+    padding-bottom:15px;
+    padding-top:15px;
+}
+
+.userprofile {
+    margin:0 auto;
+    display: block;
+}
+
+/* <!-- Navbar Notification  dropdown --> */
+#notificationDrop-menu {
+    width:300px;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 12px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#notificationDrop-menu h5 {
+    background-color: white;
+    padding: 20px;
+    border-bottom: solid 1px rgb(236, 236, 236);
+}
+
+#notificationDrop-menu ul {
+    list-style: none;
+}
+
+#accept-button {
+    background-color: #3F63C8;
+    color: white;
+    width:49%;
+}
+
+#reject-button {
+    background-color:red;
+    color:white;
+    width: 49%;
+}
+
+/* ****** Learn Drop Menu ****** */
+#learnDrop-menu {
+    width:200px;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 12px;
+}
+
+#learnDrop-menu i {
+    font-size: 16px;
+    padding-top:6px;
+    color:#3F63C8;
+}
+
+/* ******** Drop Menu ******* */
+#reportDrop-menu {
+    width:200px;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 12px;
+}
+
+#reportDrop-menu i {
+    padding-top:6px;
+    font-size: 16px;
+    color:#3F63C8;
+}
+

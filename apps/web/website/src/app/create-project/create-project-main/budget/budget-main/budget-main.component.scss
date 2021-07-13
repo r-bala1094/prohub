@@ -1,0 +1,180 @@
+.container {
+  > div {
+    background-color: white;
+    padding: 30px;
+  }
+
+  .header {
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0px 1px 2px #0000001a;
+    display: flex;
+    letter-spacing: -0.63px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    .title {
+      color: #444853;
+      display: flex;
+      flex-direction: column;
+      font: normal normal bold 25px/35px Libre Franklin;
+
+      span {
+        color: #444853;
+        font: normal normal normal 16px/35px Libre Franklin;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
+
+  .mat-radio-group {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    width: 100%;
+    .option {
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      display: flex;
+      flex-direction: column;
+      height: 190px;
+      padding: 10px;
+      width: 180px;
+
+      .mat-radio-button {
+        align-self: flex-end;
+      }
+
+      .material-icons {
+        font-size: 40px;
+      }
+
+      > div {
+        text-align: center;
+        font: normal normal medium 16px/19px Libre Franklin;
+        letter-spacing: 0px;
+        color: #444853;
+        word-wrap: normal;
+        width: 100%;
+      }
+
+      .help-text {
+        text-align: center;
+        font: normal normal normal 14px/17px Libre Franklin;
+        letter-spacing: 0px;
+        color: #b2b7c4;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .estimated-budget {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+
+    .estimated-group {
+      display: flex;
+      flex-direction: column;
+
+      .mat-radio-button {
+        font: normal normal bold 14px/17px Libre Franklin;
+        letter-spacing: 0px;
+        color: #000000;
+      }
+      .help-text {
+        font: normal normal 300 12px/15px Libre Franklin;
+        letter-spacing: 0px;
+        color: #000000;
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+      img {
+        margin-bottom: 30px;
+      }
+      .estimated-option {
+        border-bottom: 1px solid #bdbdbd;
+        margin-top: 20px;
+
+        .mat-select {
+          border: 1px solid #bdbdbd;
+          padding: 5px;
+        }
+
+        .currency {
+          padding: 0px 30px;
+        }
+
+        .min-max {
+          align-items: center;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          padding: 0px 30px;
+
+          input {
+            border: 1px solid #bdbdbd;
+            text-align: right;
+          }
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .working-hours {
+      width: 100%;
+
+      .label {
+        margin-right: 20px;
+      }
+
+      input {
+        text-align: right;
+      }
+
+      span {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .fixed-price {
+    padding-top: 0px;
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .milestone {
+    padding-top: 10px;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+
+  .title {
+    font: normal normal bold 16px/19px Libre Franklin;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+
+  .label {
+    font: normal normal 600 14px/52px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+  }
+
+  .footer {
+    border-top: 1px solid #bdbdbd;
+    margin-top: -10px;
+    padding-top: 20px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}

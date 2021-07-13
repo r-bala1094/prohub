@@ -1,0 +1,114 @@
+<div class="bottom-shadow">
+    <div style="height: 50px;"> ProHub
+    </div>
+</div>
+
+<div class="milestones-container">
+    <div class="header">
+        <div class="create-project">
+            <button mat-raised-button routerLink="/create-project/budget">Create Project > Set Milestones</button>
+        </div>  
+        <div class="title"> Set Milestones </div>
+        <div class="next">
+            <button mat-raised-button color="primary" routerLink="/create-project/budget">NEXT</button>
+        </div>
+    </div>
+    <div class="milestone" *ngFor="let mil of milestones;let i = index">
+        <div class="milestone-header" *ngIf="mil.edit;else elseBlock">
+            <div class="milestone-title">
+                Insert Milestones {{i+1}} 
+            </div>
+            <div class="milestone-option" (click)="remove(i)">
+                <span class="material-icons">
+                    remove
+                </span>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <div class="milestone-header">
+                <div class="milestone-title">
+                    Milestone {{i+1}} 
+                </div>
+                <div class="milestone-option add" (click)="addNew(i)">
+                    <span class="material-icons">
+                        add
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+        <form class="milestone-body" [formGroup]="milestoneInfo" *ngIf="mil.edit;else elseBlockDiv">
+            <div>
+                <mat-label class="label">Add amount</mat-label>
+                <div class="control">
+                    <mat-select [compareWith]="compare" class="select" formControlName="selectedCurrency" placeholder="--Select--">
+                        <mat-option *ngFor="let cur of currency" [value]="cur">
+                        {{cur.currency}}
+                        </mat-option>
+                    </mat-select>
+                    <input type="number" matInput formControlName="amount" placeholder="1200"/>
+                </div>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Start Date</mat-label>
+                    <input [max]="milestoneInfo.value.endDate" matInput [matDatepicker]="startpicker" (click)="startpicker.open()" formControlName="startDate" placeholder="Select Date">
+                    <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startpicker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>End Date</mat-label>
+                    <input [min]="milestoneInfo.value.startDate" matInput [matDatepicker]="endpicker" (click)="endpicker.open()" formControlName="endDate" placeholder="Select Date">
+                    <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #endpicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-label class="label">Description</mat-label>
+                <textarea matInput matTextareaAutosize formControlName="description" placeholder="Type..."></textarea>
+            </div>
+            <div>
+                <button mat-raised-button (click)="reset()">RESET</button>
+                <button mat-raised-button color="primary" (click)="addMilestone(i)">ADD</button>
+            </div>
+        </form>
+        <ng-template #elseBlockDiv>
+            <div class="milestone-data">
+                <div>
+                    <div class="mil-label">
+                        Amount
+                    </div>
+                    <div class="mil-value">
+                        {{mil.currencyType.currency}}
+                    </div>
+                </div>
+                <div>
+                    <div class="mil-label">
+                        Start Date
+                    </div>
+                    <div class="mil-value">
+                        {{mil.platformToMembers.startDate}}
+                    </div>
+                </div>
+                <div>
+                    <div class="mil-label">
+                        End Date
+                    </div>
+                    <div class="mil-value">
+                        {{mil.platformToMembers.endDate}}
+                    </div>
+                </div>
+                <div>
+                    <div class="mil-label">
+                        Description
+                    </div>
+                    <div class="mil-value">
+                        {{mil.description}}
+                    </div>
+                </div>
+                <div>
+                    <button mat-raised-button (click)="edit(i)">EDIT</button>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

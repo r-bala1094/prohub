@@ -1,0 +1,68 @@
+<section>
+    <div class="col-12 pb-4">
+        <span class="d-flex flex-column mt-3">
+            <mat-form-field appearance="outline">
+                <mat-label>What's the name of your company</mat-label>
+                <input matInput placeholder="What's the name of your company" formControlName="companyName">
+            </mat-form-field>
+        </span>
+        <span class="d-flex flex-column">
+            <mat-form-field class="chip-list w-100 mt-3" appearance="outline">
+                <mat-label>Role in Company</mat-label>
+                <mat-chip-list #chipList1 formControlName="companyRolesChipList">
+                <mat-chip
+                    *ngFor="let role of rolesInfo.get('companyRolesChipList').value"
+                    [selectable]="true"
+                    [removable]="true"
+                    (removed)="removeCompanyRole(role)">
+                    {{role}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input
+                    placeholder="Search Company Role..."
+                    formControlName="roleInput"
+                    [matAutocomplete]="auto1"
+                    [matChipInputFor]="chipList1"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+                </mat-chip-list>
+                <mat-autocomplete #auto1="matAutocomplete" (optionSelected)="selectedObjective($event)">
+                <mat-option *ngFor="let role of roles" [value]="role">
+                    {{role}}
+                </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </span>
+        <span class="d-flex flex-column">
+            <mat-form-field class="chip-list w-100 mt-3" appearance="outline">
+                <mat-label>What you do in your Organisation</mat-label>
+                <mat-chip-list #chipList2 formControlName="companyRolesChipList">
+                <mat-chip
+                    *ngFor="let role of rolesInfo.get('companyRolesChipList').value"
+                    [selectable]="true"
+                    [removable]="true"
+                    (removed)="removeCompanyRole(role)">
+                    {{role}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input
+                    placeholder="Search Company Role..."
+                    formControlName="roleInput"
+                    [matAutocomplete]="auto2"
+                    [matChipInputFor]="chipList2"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+                </mat-chip-list>
+                <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="selectedObjective($event)">
+                <mat-option *ngFor="let role of roles" [value]="role">
+                    {{role}}
+                </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </span>
+        <span class="d-flex flex-column mt-2">
+            <span class="title">How many employees does your organisation have ?</span>
+            <mat-radio-button class="title mt-2" *ngFor="let employee of employees" [value]="employee">
+            {{employee}}
+            </mat-radio-button>
+        </span>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <g id="Group_10366" data-name="Group 10366" transform="translate(-484 -2240)">
+    <circle id="Ellipse_987" data-name="Ellipse 987" cx="60" cy="60" r="60" transform="translate(484 2240)" fill="#f9db0d"/>
+    <g id="business-proposal" transform="translate(524 2274)">
+      <path id="Path_7801" data-name="Path 7801" d="M78.7,97.763H67.885a.626.626,0,0,1,0-1.253H78.7a.626.626,0,1,1,0,1.253Z" transform="translate(-62.941 -78.392)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <path id="Path_7802" data-name="Path 7802" d="M78.7,160.714H67.885a.626.626,0,0,1,0-1.253H78.7a.626.626,0,1,1,0,1.253Z" transform="translate(-62.941 -125.571)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <g id="Group_10357" data-name="Group 10357" transform="translate(0 4.849)">
+        <path id="Path_7803" data-name="Path 7803" d="M84.19,85.84V44.174a.626.626,0,0,0-.626-.626H50.649a.626.626,0,0,0-.626.626V85.84a.626.626,0,0,0,.626.626H83.564A.626.626,0,0,0,84.19,85.84Zm-1.253-.626H51.276V44.8H82.937Z" transform="translate(-50.023 -43.548)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7804" data-name="Path 7804" d="M100.831,52.817a.626.626,0,0,0-1.25.082l2.7,40.951L70.683,95.929l-.1-1.47a.626.626,0,0,0-1.25.082l.138,2.1a.627.627,0,0,0,.624.585l.042,0,32.843-2.162a.626.626,0,0,0,.584-.666Z" transform="translate(-64.496 -50.056)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7805" data-name="Path 7805" d="M104.4,140.772H115.6a.626.626,0,0,0,0-1.253H104.4a.626.626,0,1,0,0,1.253Z" transform="translate(-90.309 -115.474)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7806" data-name="Path 7806" d="M67.885,140.772h6.644a.626.626,0,1,0,0-1.253H67.885a.626.626,0,0,0,0,1.253Z" transform="translate(-62.941 -115.474)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7807" data-name="Path 7807" d="M133.737,127.055a.626.626,0,0,0,.626.626h7.372a.626.626,0,1,0,0-1.253h-7.372A.626.626,0,0,0,133.737,127.055Z" transform="translate(-112.763 -105.664)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7808" data-name="Path 7808" d="M67.885,127.682h14.15a.626.626,0,1,0,0-1.253H67.885a.626.626,0,0,0,0,1.253Z" transform="translate(-62.941 -105.664)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7809" data-name="Path 7809" d="M101.945,113.965a.626.626,0,0,0,.626.626h13.413a.626.626,0,1,0,0-1.253H102.571A.626.626,0,0,0,101.945,113.965Z" transform="translate(-88.936 -95.854)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7810" data-name="Path 7810" d="M67.885,114.592H74.07a.626.626,0,0,0,0-1.253H67.885a.626.626,0,0,0,0,1.253Z" transform="translate(-62.941 -95.854)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7811" data-name="Path 7811" d="M141.736,189.379h-7.372a.626.626,0,1,0,0,1.253h7.372a.626.626,0,1,0,0-1.253Z" transform="translate(-112.764 -152.842)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7812" data-name="Path 7812" d="M67.885,190.632h14.15a.626.626,0,1,0,0-1.253H67.885a.626.626,0,1,0,0,1.253Z" transform="translate(-62.941 -152.842)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7813" data-name="Path 7813" d="M101.945,176.915a.626.626,0,0,0,.626.626h13.413a.626.626,0,1,0,0-1.253H102.571A.626.626,0,0,0,101.945,176.915Z" transform="translate(-88.936 -143.032)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7814" data-name="Path 7814" d="M67.885,177.542H74.07a.626.626,0,1,0,0-1.253H67.885a.626.626,0,1,0,0,1.253Z" transform="translate(-62.941 -143.032)" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <path id="Path_7815" data-name="Path 7815" d="M82.019,76.416h17.2a.626.626,0,1,0,0-1.253h-17.2a.626.626,0,1,0,0,1.253Z" transform="translate(-73.534 -67.242)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      </g>
+      <path id="Path_7816" data-name="Path 7816" d="M67.186,35.066A1.871,1.871,0,0,1,65.318,33.2V27.511a.626.626,0,0,1,1.253,0V33.2a.616.616,0,1,0,1.232,0V27.3a1.858,1.858,0,1,0-3.716,0v4.65a.626.626,0,1,1-1.253,0V27.3a3.111,3.111,0,1,1,6.222,0V33.2A1.871,1.871,0,0,1,67.186,35.066Z" transform="translate(-59.624 -24.194)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

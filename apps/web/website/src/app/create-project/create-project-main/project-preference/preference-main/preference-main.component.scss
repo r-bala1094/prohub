@@ -1,0 +1,41 @@
+.container {
+  > div {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  .header {
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0px 1px 2px #0000001a;
+    display: flex;
+    letter-spacing: -0.63px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    .title {
+      color: #444853;
+      display: flex;
+      flex-direction: column;
+      font: normal normal bold 25px/35px Libre Franklin;
+
+      span {
+        color: #444853;
+        font: normal normal normal 16px/35px Libre Franklin;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
+
+  .footer {
+    border-top: 1px solid #bdbdbd;
+    margin-top: -10px;
+    padding-top: 20px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}

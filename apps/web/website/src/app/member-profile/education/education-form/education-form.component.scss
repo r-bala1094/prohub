@@ -1,0 +1,170 @@
+$border-color: #E4E4E4;
+
+.blur, .form-containter {
+  height: 98vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.blur {
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.form-containter {
+  background-color: none;
+  opacity: 1;
+  z-index: 2;
+
+  .form-content {
+    width: 700px;
+    background-color: white;
+    height: auto;
+    position: relative;
+    margin: 70px auto;
+
+    .edit-section, .header {
+      align-items: center;
+      display: flex;
+      min-height: 70px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .header {
+      border-bottom: 2px solid $border-color;
+      color: black;
+      font: normal normal bold 25px/30px Libre Franklin;
+      padding: 10px 20px;
+      justify-content: space-between;
+
+      span {
+        color: #3F63C8;
+        cursor: pointer;
+        font-size: 34px;
+      }
+    }
+
+    .form-fields {
+      padding: 20px;
+      width: 100%;
+
+      label {
+        font-size: 14px;
+        color: #212121;
+      }
+      .form-fields-title {
+        margin-bottom: 10px;
+        input {
+          padding: 10px;
+          width: 100%;
+          height: 73px;
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 1px 2px #0000001A;
+          border: 1px solid #BDBDBD;
+          border-radius: 4px;
+          font-size: 28px;
+        }
+      }
+
+      .form-fields-university-name {
+        margin-bottom: 10px;
+
+        mat-form-field {
+          padding: 5px;
+          width: 100%;
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 1px 2px #0000001A;
+          border: 1px solid #BDBDBD;
+          border-radius: 4px;
+        }
+      }
+
+
+      .form-fields-date {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        .date {
+          width: 45%;
+          .mat-form-field {
+            width: 100%;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #BDBDBD;
+            border-radius: 4px;
+
+            input {
+              height: 100%;
+              padding-left: 10px;
+            }
+          }
+
+          .mat-form-field:focus {
+            border: 1px dotted red !important;
+          }
+
+           #acceptTerms {
+             margin: 5px 10px 0px 0px;
+           }
+
+           #acceptTerms ~ label{
+            text-align: left;
+            font: normal normal 600 14px/52px Libre Franklin;
+            letter-spacing: 0px;
+            color: #212121;
+            opacity: 1;
+           }
+        }
+        .disable-div {
+          pointer-events: none;
+          opacity: 0.3;
+        }
+      }
+
+      .form-fields-description {
+        textarea {
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 1px 2px #0000001A;
+          border: 1px solid #BDBDBD;
+          border-radius: 4px;
+          color: #212121;
+          font-size: 14px;
+          min-height: 130px;
+          padding: 10px;
+          resize: none;
+          width: 100%;
+        }
+      }
+    }
+
+    .edit-section {
+      justify-content: flex-end;
+      background-color: #F7F7F7;
+
+      .close-button {
+        margin-right: 20px;
+      }
+    }
+
+    ::ng-deep .mat-form-field-underline {
+      display: none !important;
+    }
+
+    ::ng-deep .mat-form-field-wrapper {
+      padding: 0px !important;
+    }
+
+    ::ng-deep .mat-form-field-infix {
+      border: 0px !important;
+    }
+
+    .mat-form-field {
+      border: 1px solid black;
+    }
+
+  }
+}

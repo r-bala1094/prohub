@@ -1,0 +1,26 @@
+
+<div class="question p-5 mt-4">
+    <div class="local-expert-container">
+        <form [formGroup]="localExpertInfo" class="d-flex flex-column">
+            <mat-checkbox color="primary" formControlName="requireLocalExpert">
+                Require a local expert
+            </mat-checkbox>
+            <mat-form-field *ngIf="showDetails">
+                <mat-label>Select Country</mat-label>
+                <mat-select formControlName="selectedCountry" [compareWith]="compareCountry">
+                  <mat-option *ngFor="let country of countries" [value]="country">
+                    {{country.name}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field *ngIf="showDetails">
+                <mat-label>Select City</mat-label>
+                <mat-select formControlName="selectedCity" [compareWith]="compareCity">
+                    <mat-option *ngFor="let city of cities" [value]="city">
+                    {{city}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>    
+</div>  

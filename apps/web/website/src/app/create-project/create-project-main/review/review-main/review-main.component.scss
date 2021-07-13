@@ -1,0 +1,145 @@
+.container {
+  > div {
+    background-color: white;
+    padding: 30px;
+  }
+
+  .header {
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0px 1px 2px #0000001a;
+    display: flex;
+    letter-spacing: -0.63px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    .title {
+      color: #444853;
+      display: flex;
+      flex-direction: column;
+      font: normal normal bold 25px/35px Libre Franklin;
+    }
+  }
+
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #bdbdbd;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      font: normal normal bold 20px/35px Libre Franklin;
+      letter-spacing: -0.5px;
+      color: #444853;
+      margin-bottom: 20px;
+
+      span {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #3f63c8;
+        border-radius: 50%;
+        color: #3f63c8;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .line {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .label {
+      font: normal normal 600 16px Libre Franklin;
+      letter-spacing: 0px;
+      color: #b2b7c4;
+      margin-bottom: 10px;
+    }
+
+    .value {
+      align-items: center;
+      display: flex;
+      font: normal normal normal 16px Libre Franklin;
+      letter-spacing: 0px;
+      color: #212121;
+      margin-bottom: 25px;
+
+      .material-icons {
+        color: #3f63c8;
+        margin-right: 10px;
+      }
+    }
+
+    .questions {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 2px #0000001a;
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+      color: #808080;
+      text-align: left;
+      font: normal normal medium 14px/52px Libre Franklin;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .break {
+    margin-top: 15px;
+
+    .section-header {
+      font: normal normal bold 25px/35px Libre Franklin;
+      letter-spacing: -0.63px;
+      color: #444853;
+      border-bottom: 1px solid #bdbdbd;
+      padding-bottom: 20px;
+    }
+  }
+
+  .footer {
+    button {
+      margin-right: 20px;
+    }
+  }
+}
+
+.lang-container {
+  width: 100%;
+
+  .selected-language {
+    align-items: center;
+    border: 1px solid #f5f5f5;
+    display: flex;
+    height: 36px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    * {
+      margin-right: 10px;
+    }
+
+    .language {
+      text-align: left;
+      font: normal normal normal 14px/52px Libre Franklin;
+      letter-spacing: 0px;
+      color: #5a6276;
+      width: 25%;
+    }
+
+    .progress {
+      width: 50%;
+    }
+
+    .level {
+      font: normal normal normal 8px/52px Libre Franklin;
+      letter-spacing: 0px;
+      color: #5a6276;
+      width: 20%;
+    }
+  }
+}

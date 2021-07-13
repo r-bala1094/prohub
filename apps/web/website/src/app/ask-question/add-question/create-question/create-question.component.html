@@ -1,0 +1,99 @@
+<section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <nav class="navbar">
+                    <a class="navbar navbar-brand" routerLink="/">
+                        <img src="../../../assets/prohub logo 2.png" height="60px">
+                    </a>
+                    <ul class="navbar nav ms-auto">
+                        <li>
+                            <img src="https://picsum.photos/200" class="rounded-circle" width="50px">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section2">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm col-md-4 mt-auto"> 
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/ask-question">Back</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ask a Question</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-sm col-md-4 text-center m-auto">
+                <h2> <strong>Ask a Question</strong></h2>   
+            </div>
+            <div class="col-sm col-md-4"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section3 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- /////// Select Category //////// -->
+            <div class="col-sm col-md-3">
+                <div class="how-it-works p-4">
+                    <h5> <i class="fa fa-question"> </i> <strong> HOW IT WORKS </strong></h5>
+                    <ol>
+                        <li>
+                            Select the Category of Professionals that you require
+                        </li>
+                        <li>
+                            Select the Sub-Category. This will narrow down your experts. If you'd like to select all experts in that Category, select all.
+                        </li>
+                        <li>
+                            Choose the Level of Expertise that you need .
+                        </li>
+                        <li>
+                            Insert the Question Title that best describes your question.
+                        </li>
+                        <li>
+                            Provide relevant Background Information. This will enable the expert to understand the context of your question. Be descriptive and succinct.
+                        </li>
+                        <li>
+                            Insert your question. Ensure you are to the point and describe exactly what you'd like a response to.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-9">
+                <prohub-category #categoriesComp></prohub-category>
+                <prohub-title-description #questionComp></prohub-title-description>
+                <prohub-require-local #localExpertComp></prohub-require-local>
+
+                <button class="btn btn-primary mt-5" [disabled]="categoriesComp.categoriesInfo.invalid || questionComp.titleForm.invalid" (click)="save()" data-toggle="modal" data-target="#exampleModal">Next</button>
+                <button class="btn btn-light mt-5 ml-3" routerLink="./">Back</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Modal -->
+<section class="popup" *ngIf="successfull === true">  
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/ask-question">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="fa fa-check-circle fa-4x mb-3"></i>
+            <h3>Created Successfully</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

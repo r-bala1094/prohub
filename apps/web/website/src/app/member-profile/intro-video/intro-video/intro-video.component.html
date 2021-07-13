@@ -1,0 +1,42 @@
+<div class="intro-video-container">
+  <div class="header">
+   <h1>
+     Upload Introduction Video
+    </h1>
+    <p>
+      Please upload or record a maximum 90s video introducing yourself and/or your business
+    </p>
+  </div>
+  <div class="intro-video-content">
+    <div *ngIf="! preViewVideo"  class="add-video-container" (click)="addVideo.click()">
+      <span class="material-icons">
+        add
+      </span>
+      <p>Add</p>
+      <input #addVideo
+        class="add-cv-input"
+        type='file'
+        accept="video/mp4,video/x-m4v,video/*"
+        hidden
+        (change)="onSelectVideo($event.target)">
+    </div>
+    <div *ngIf="preViewVideo" class="preView-container">
+      <span (click)="deleteVideo()" class="material-icons round">
+        delete
+        </span>
+      <video width="300" controls>
+        <source [src]="preViewVideo"  id='video' type="video/mp4"/>
+        Your browser does not support HTML5 video.
+        </video>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back</button>
+      <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')">Next</button>
+  </div>
+</div>

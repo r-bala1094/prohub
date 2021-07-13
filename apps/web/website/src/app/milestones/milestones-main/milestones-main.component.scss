@@ -1,0 +1,132 @@
+.milestones-container {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 200px;
+  justify-content: center;
+
+  .header {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    width: 100%;
+    > div {
+      align-items: center;
+      display: flex;
+      font: normal normal bold 25px/30px Libre Franklin;
+      letter-spacing: 0px;
+      color: #444853;
+      width: 33%;
+    }
+    .create-project {
+      justify-content: flex-start;
+    }
+    .title {
+      justify-content: center;
+    }
+    .next {
+      justify-content: flex-end;
+    }
+  }
+
+  .milestone {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 30px;
+    width: 100%;
+
+    .milestone-header {
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+
+      .milestone-title {
+        font: normal normal bold 25px/35px Libre Franklin;
+        letter-spacing: -0.63px;
+        color: #444853;
+      }
+
+      .milestone-option {
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #f74040;
+        display: flex;
+        height: 35px;
+        width: 35px;
+
+        &.add {
+          background-color: #3f63c8;
+        }
+      }
+    }
+
+    .milestone-body {
+      > div {
+        margin-top: 20px;
+
+        button {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .milestone-data {
+      > div {
+        display: flex;
+        margin-top: 10px;
+
+        .mil-label {
+          font: normal normal 600 14px/52px Libre Franklin;
+          letter-spacing: 0px;
+          color: #b2b7c4;
+          width: 200px;
+        }
+
+        .mil-value {
+          font: normal normal normal 14px/52px Libre Franklin;
+          letter-spacing: 0px;
+          color: #212121;
+        }
+      }
+    }
+  }
+
+  .control {
+    display: flex;
+    .select {
+      border: 1px solid #bdbdbd;
+      border-radius: 4px 4px 0px 0px;
+      font: normal normal medium 16px/52px Libre Franklin;
+      letter-spacing: 0px;
+      color: #212121;
+      width: 140px;
+    }
+
+    input {
+      border: 1px solid #bdbdbd;
+      border-radius: 4px 4px 0px 0px;
+      width: 250px;
+    }
+  }
+
+  .mat-form-field {
+    margin-right: 20px;
+  }
+
+  .label {
+    font: normal normal 600 14px/52px Libre Franklin;
+    letter-spacing: 0px;
+    color: #212121;
+  }
+
+  textarea {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px 4px 0px 0px;
+  }
+}

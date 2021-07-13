@@ -1,0 +1,49 @@
+<div class="upload-cv-container">
+  <div class="header">
+  Upload CV
+  </div>
+  <div class="upload-cv-content">
+    <div class="point-one">
+      <p class="list-number">1,</p>
+      <span class="add-file-button" style="margin:0px 20px">
+        <label for="addCv">
+          <button mat-stroked-button (click)="addCv.click()">Add File</button>
+        </label>
+        <input #addCv
+          class="add-cv-input"
+          type='file'
+          accept=".pdf"
+          (error)="assertErr($event.target)"
+          (change)="onSelectFile($event.target)">
+
+        <span style="margin-left:20px;">{{pdfName? pdfName: 'None'}}</span>
+        <div class= "add-file-text" style="margin-top: 20px;">
+          <p >LinkedIn resumes work best
+          </p>
+          <p>Download a PDF of yours
+            <a href= "https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+            target= "_blank">here</a>
+          </p>
+        </div>
+      </span>
+    </div>
+    <div class="point-two">
+      <p class="list-number">2,
+        <span style="margin:20px">Choose what you would like to import from your resume.</span>
+      </p>
+      <section class="example-section" style="margin:20px">
+        <mat-checkbox [(ngModel)]="pdfImportCheckBox.aboutMe" class="check-box-item" color="primary">About Me</mat-checkbox>
+        <mat-checkbox [(ngModel)]="pdfImportCheckBox.experience" class="check-box-item" color="primary">Experience</mat-checkbox>
+        <mat-checkbox [(ngModel)]="pdfImportCheckBox.education" class="check-box-item" color="primary">Education</mat-checkbox>
+        <mat-checkbox [(ngModel)]="pdfImportCheckBox.skills" class="check-box-item" color="primary">Skills</mat-checkbox>
+      </section>
+    </div>
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')"
+      [disabled]="pdfName === '' ">Next</button>
+  </div>
+</div>

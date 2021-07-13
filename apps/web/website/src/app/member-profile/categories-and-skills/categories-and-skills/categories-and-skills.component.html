@@ -1,0 +1,101 @@
+<div class="categories-container">
+  <div class="header">
+    Categories & Skills
+  </div>
+  <div class="categories-content">
+    <!-- categories -->
+    <label>Add Category</label>
+    <mat-form-field style="width:100%" floatLabel="never">
+      <mat-chip-list #categoryChipList>
+        <mat-chip
+          *ngFor="let category of selectedCategories"
+          [selectable]="selectable"
+          [removable]="removable"
+          (removed)="remove(category)">
+          {{category.category}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input
+          placeholder="Search Category"
+          #categoryInput
+          [formControl]="categoryCtrl"
+          [matAutocomplete]="auto"
+          [matChipInputFor]="categoryChipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+      </mat-chip-list>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let category of filteredCategories" [value]="category.category">
+          {{category.category}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <!-- sub categories -->
+    <label [ngClass]="{ 'disable' :  selectedCategories.length === 0}">Add Sub Category</label>
+    <mat-form-field [ngClass]="{ 'disable' :  selectedCategories.length === 0}"
+    style="width:100%" floatLabel="never" >
+      <mat-chip-list #subCategoryChipList>
+        <mat-chip
+          *ngFor="let subCategory of selectedSubCategories"
+          [selectable]="selectable"
+          [removable]="removable"
+          (removed)="removeSubCategory(subCategory)">
+          {{subCategory.subCategory}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input
+          placeholder="Search or Enter Sub category"
+          #subCategoryInput
+          [formControl]="subCategoryCtrl"
+          [matAutocomplete]="autoSubCategory"
+          [matChipInputFor]="subCategoryChipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+      </mat-chip-list>
+      <mat-autocomplete #autoSubCategory="matAutocomplete" (optionSelected)="selectedSubCategory($event)">
+        <mat-option *ngFor="let subCategory of listOfSubCategories" [value]="subCategory.subCategory">
+          {{subCategory.subCategory}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <!-- skills -->
+    <label [ngClass]="{ 'disable' :  selectedSubCategories.length === 0}">Add Skills</label>
+    <mat-form-field [ngClass]="{ 'disable' :  selectedSubCategories.length === 0}"
+    style="width:100%;" floatLabel="never">
+      <mat-chip-list #skillsChipList>
+        <mat-chip
+          *ngFor="let skill of selectedSkills"
+          [selectable]="selectable"
+          [removable]="removable"
+          (removed)="removeSkill(skill)">
+          {{skill.skill}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input
+          placeholder="Search or Enter Skills"
+          #skillsInput
+          [formControl]="skillsCtrl"
+          [matAutocomplete]="autoSkills"
+          [matChipInputFor]="skillsChipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+      </mat-chip-list>
+      <mat-autocomplete #autoSkills="matAutocomplete" (optionSelected)="selectedSkill($event)">
+        <mat-option *ngFor="let skill of listOfSkills" [value]="skill.skill">
+          {{skill.skill}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+  </div>
+  <div class="edit-section">
+    <button mat-raised-button
+    class="back-button"
+    (click)="handleMovePage('back')">Back
+    </button>
+    <button mat-raised-button
+      class="next-button"
+      color="primary"
+      (click)="handleMovePage('next')"
+      [disabled]= "selectedCategories.length < 1 || selectedSubCategories.length < 1">Next
+    </button>
+  </div>
+</div>
+

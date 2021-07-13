@@ -1,0 +1,27 @@
+<div class="screening-container">
+    <div class="screening-title">
+        Screening Questions (optional)
+        <span>Add screening questions and/or require a cover letter</span>
+    </div>
+    <form [formGroup]="screeningInfo">
+        <div class="add-button clickable" (click)="addItem()">+ Add a Question</div>
+        <div class="question-container" formArrayName="questions" *ngFor="let item of getControls(); let i = index">
+            <ng-container [formGroupName]="i">
+              <div  class="question">
+                <input type="text" formControlName="question" matInput>
+                <span class="material-icons clickable" style="color: grey;" (click)="deleteItem(i)" *ngIf="getControls().length >= 1">
+                  cancel
+                </span>
+              </div>
+              <div class="hint" align="end">{{screeningInfo.get('questions').value[i].question.length}} /256 characters</div>
+            </ng-container>
+          </div>
+          <div class="require-cover">
+            <mat-checkbox
+            color="primary"
+            formControlName="requireCoverLetterFromExperts"
+            >Yes, require a cover letter from experts</mat-checkbox
+          >
+          </div>
+    </form>
+</div>

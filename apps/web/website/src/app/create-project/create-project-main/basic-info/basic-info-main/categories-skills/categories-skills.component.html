@@ -1,0 +1,84 @@
+<form [formGroup]="categoriesInfo">
+<mat-form-field class="chip-list">
+  <mat-label>Select Category</mat-label>
+  <mat-chip-list #chipList1 formControlName="categoriesChipList">
+    <mat-chip
+      *ngFor="let category of categoriesInfo.get('categoriesChipList').value"
+      [selectable]="true"
+      [removable]="true"
+      (removed)="removeCategory(category)">
+      {{category.category}}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input
+      placeholder="Search Category..."
+      formControlName="categoryInput"
+      [matAutocomplete]="auto1"
+      [matChipInputFor]="chipList1"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+  </mat-chip-list>
+  <mat-autocomplete #auto1="matAutocomplete" (optionSelected)="selectedCategory($event)">
+    <mat-option *ngFor="let category of filteredcategories | async" [value]="category">
+      {{category.category}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+<mat-form-field class="chip-list">
+  <mat-label>Select Sub Category</mat-label>
+  <mat-chip-list #chipList2 formControlName="subCategoriesChipList">
+    <mat-chip
+      *ngFor="let subcategory of categoriesInfo.get('subCategoriesChipList').value"
+      [selectable]="true"
+      [removable]="true"
+      (removed)="removeSubCategory(subcategory)">
+      {{subcategory.subCategory}}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input
+      placeholder="Search Sub category..."
+      formControlName="subcategoryInput"
+      [matAutocomplete]="auto2"
+      [matChipInputFor]="chipList2"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+  </mat-chip-list>
+  <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="selectedSubCategory($event)">
+    <mat-option *ngFor="let subcategory of filteredSubcategories | async" [value]="subcategory">
+      {{subcategory.subCategory}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+<div class="suggested-categories">
+  <div class="suggested-title">
+    Suggested Categories
+  </div>
+  <div class="suggested-list">
+    <div *ngFor="let sugg of suggestedCategories">
+      {{sugg}}
+    </div>
+  </div>
+</div>
+<mat-form-field class="chip-list">
+  <mat-label>Select Skills</mat-label>
+  <mat-chip-list #chipList3 formControlName="skillsChipList">
+    <mat-chip
+      *ngFor="let skill of categoriesInfo.get('skillsChipList').value"
+      [selectable]="true"
+      [removable]="true"
+      (removed)="removeSkill(skill)">
+      {{skill.skill}}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input
+      placeholder="Search Skills/knowledge..."
+      formControlName="skillsInput"
+      [matAutocomplete]="auto3"
+      [matChipInputFor]="chipList3"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+  </mat-chip-list>
+  <mat-autocomplete #auto3="matAutocomplete" (optionSelected)="selectedSkill($event)">
+    <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
+      {{skill.skill}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+</form>

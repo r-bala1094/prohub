@@ -1,0 +1,40 @@
+<prohub-header> </prohub-header>
+
+<section id="nav-2"> 
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="user-name">Hey, John Doe </h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <button mat-raised-button routerLink="#" class="ask-question">Create Packages</button>
+                <button mat-raised-button routerLink="/ask-question" class="post-project ml-3">Reply Questions</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let stat of stats">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">{{stat.statsCount}}</h5>
+                        <p class="card-text p-2">{{stat.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>

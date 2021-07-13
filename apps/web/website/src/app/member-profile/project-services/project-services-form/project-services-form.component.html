@@ -1,0 +1,153 @@
+
+<div class="blur"></div>
+<div class="form-containter">
+  <div class="form-content">
+    <div class="header">
+      <h2 *ngIf="formCreateType === 'new'">Add Project & Services</h2>
+      <h2 *ngIf="formCreateType === 'edit'">Edit Project & Services</h2>
+      <span (click)="formSubmitHandler('close')" class="material-icons">
+        cancel
+      </span>
+    </div>
+    <form [formGroup]="projectServiceFormGroup"
+    class="form-fields">
+      <!-- title -->
+      <div class="form-fields-title">
+        <label>Course/Certification Title</label>
+        <br/>
+        <input placeholder="Your title" type="text" formControlName="projectAndServiceTitle">
+      </div>
+      <!-- categpories -->
+      <div class="form-fields-categories">
+        <label>Categories</label>
+        <mat-form-field style="width:100%" floatLabel="never">
+          <mat-label>-- Select --</mat-label>
+          <mat-select formControlName="categories"
+          (selectionChange)="resetSelectedSubCategories()"
+          [compareWith]="compareFn">
+            <mat-option *ngFor="let categories of listOfCategories" [value]="categories">
+              {{categories.category}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- sub categories -->
+      <div class="form-fields-sub-category">
+        <label [ngClass]="{ 'disable' :  ! projectServiceFormGroup.value.categories.hasOwnProperty('category')}">
+          Add Sub Category
+        </label>
+        <mat-form-field
+          [ngClass]="{ 'disable' :  ! projectServiceFormGroup.value.categories.hasOwnProperty('category')}"
+          style="width:100%" floatLabel="never" >
+          <mat-chip-list #subCategoryChipList>
+            <mat-chip
+              *ngFor="let subCategory of selectedSubCategories"
+              [selectable]="selectable"
+              [removable]="removable"
+              (removed)="removeSubCategory(subCategory)">
+              {{subCategory.subCategory}}
+              <mat-icon matChipRemove *ngIf="removable">
+                cancel
+              </mat-icon>
+            </mat-chip>
+            <input
+              placeholder="Search or Enter Sub category"
+              #subCategoryInput
+              formControlName="subCategories"
+              [matAutocomplete]="autoSubCategory"
+              [matChipInputFor]="subCategoryChipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+          </mat-chip-list>
+          <mat-autocomplete #autoSubCategory="matAutocomplete" (optionSelected)="selectedSubCategory($event)">
+            <mat-option
+            *ngFor="let subCategory of listOfSubCategories | filterById: projectServiceFormGroup.value.categories.categoryId"
+            [value]="subCategory.subCategory">
+              {{subCategory.subCategory}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <!-- date container -->
+      <div class="form-fields-date">
+        <div class="date">
+          <label>Project Duration</label>
+          <br/>
+          <mat-form-field floatLabel="never">
+            <mat-label style="padding: 10px;"> Select date</mat-label>
+            <input matInput
+            [matDatepicker]="startDate"
+            formControlName="startDate"
+            (click)="startDate.open()"
+            placeholder="Select Date"
+            autocomplete="off"
+            [max]="projectServiceFormGroup.value.endDate">
+            <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+            <mat-datepicker #startDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="date">
+          <div [ngClass]="{'disable': projectServiceFormGroup.value.currentlyWorkingHere}">
+            <label>End date</label>
+            <br/>
+            <mat-form-field floatLabel="never">
+              <mat-label style="padding: 10px;"> Select date</mat-label>
+              <input matInput
+              [matDatepicker]="endDate"
+              formControlName="endDate"
+              (click)="endDate.open()"
+              autocomplete="off"
+              [min]="projectServiceFormGroup.value.startDate">
+              <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+              <mat-datepicker #endDate></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <input type="checkbox" formControlName="currentlyWorkingHere" id="acceptTerms">
+            <label for="acceptTerms">Currently working</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- attachments -->
+      <label>Add Documents/Attachments</label>
+      <div class="form-fields-attachments">
+        <div *ngFor="let file of [0,0,0]; index as i">
+          <div *ngIf="listOfFiles[i].hasOwnProperty('Location')" class="file-area">
+            <span class="material-icons custom-icon-style" (click)="deleteFile(i)">delete</span>
+            <img src="../../../../assets/pdf.png" style="width: 90px;height: 90px;padding-top: 10px;">
+          </div>
+          <div *ngIf=" ! listOfFiles[i].hasOwnProperty('Location')" class="file-area dropzone" prohubDnd (fileDropped)="handleUpload($event, i)">
+            <input type="file" #fileDropRef id="fileDropRef" hidden multiple (change)="handleUpload($event.target.files, i)"/>
+            <span class="material-icons">
+                  cloud_upload
+            </span>
+            <div class="help-text">
+              Drag your file or
+              <span (click)="fileDropRef.click()">
+                Browse
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="edit-section">
+      <button mat-raised-button
+      class="close-button"
+      (click)="formSubmitHandler('close')">Close</button>
+      <button *ngIf="formCreateType === 'new' "
+      mat-raised-button
+      [disabled]="disableForm()"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('new')">Add</button>
+      <button *ngIf="formCreateType === 'edit' "
+      mat-raised-button
+      [disabled]="disableForm()"
+      class="next-button"
+      color="primary"
+      (click)="formSubmitHandler('edit')">Save</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<form [formGroup]="objectivesInfo">
+    <mat-form-field class="chip-list">
+        <mat-label>Add Objectives</mat-label>
+        <mat-chip-list #chipList1 formControlName="objectivesChipList">
+          <mat-chip
+            *ngFor="let objective of objectivesInfo.get('objectivesChipList').value"
+            [selectable]="true"
+            [removable]="true"
+            (removed)="removeObjective(objective)">
+            {{objective.category}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Search..."
+            formControlName="objectiveInput"
+            [matAutocomplete]="auto1"
+            [matChipInputFor]="chipList1"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+        </mat-chip-list>
+        <mat-autocomplete #auto1="matAutocomplete" (optionSelected)="selectedObjective($event)">
+          <mat-option *ngFor="let objective of filteredObjectives | async" [value]="objective">
+            {{objective.category}}
+          </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="chip-list">
+        <mat-label>Add Deliverables</mat-label>
+        <mat-chip-list #chipList2 formControlName="deliverablesChipList">
+          <mat-chip
+            *ngFor="let deliverable of objectivesInfo.get('deliverablesChipList').value"
+            [selectable]="true"
+            [removable]="true"
+            (removed)="removeDeliverable(deliverable)">
+            {{deliverable.deliverable}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Search..."
+            formControlName="deliverableInput"
+            [matAutocomplete]="auto2"
+            [matChipInputFor]="chipList2"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+        </mat-chip-list>
+        <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="selectedDeliverable($event)">
+          <mat-option *ngFor="let deliverable of filteredDeliverables | async" [value]="deliverable">
+            {{deliverable.deliverable}}
+          </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

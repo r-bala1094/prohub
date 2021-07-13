@@ -1,0 +1,57 @@
+<section>
+    <div class="container mt-3">
+        <div class="col-sm col-md">
+            <h3><b>Add Languages</b></h3>
+            <hr/>
+            <form>
+                
+                <div class="container mt-4 ">
+                    <div class="row">
+                        <div class="col-sm col-md-6">
+                            <h6><b>Add Language</b></h6>
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Enter Name</mat-label>
+                                <input matInput>
+                              </mat-form-field>
+                        </div>
+                    
+                       <div class="col-sm col-md-6">
+                        <h6><b>Set Level</b></h6>
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Level</mat-label>
+                                <mat-select (ngModel)="selectedValue" name="level">
+                                <mat-option *ngFor="let level of levels" [value]="level.value">
+                                    {{level.viewValue}}
+                                </mat-option>
+                                </mat-select>
+                           </mat-form-field>
+                        </div>
+                        </div>
+                    </div>
+             </form>
+             <div class="row">
+                 <div class="col-sm col-md text-right mr-3">
+                    <button mat-raised-button color="primary">Add</button>
+                 </div>
+             </div>
+             <div class="row mt-4">
+                 <div class="col-sm-12 col-md">
+                     <table class="table table striped">
+                         <tr class="table-row">
+                         <th>Language Name</th>
+                         <th>LEVEL</th>
+                         <th>ACTIONS</th>
+                         </tr>
+                         <tr (ngmodel)="FluentLanguage" *ngFor="let language of languages">
+                          <td>{{language.name}}</td>
+                          <td>{{language.level}}</td>
+                          <td><mat-icon>edit</mat-icon>
+                            <mat-icon class="ml-2">delete</mat-icon></td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+        </div>
+    </div>
+</section>
+

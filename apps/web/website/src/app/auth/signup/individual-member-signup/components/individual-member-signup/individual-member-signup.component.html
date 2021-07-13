@@ -1,0 +1,28 @@
+ <!-- header -->
+  <!-- replace the below div with the header component for lib  -->
+  <div class="bottom-shadow">
+    <img style="height: 50px; width: 96px;margin-left: 5%" src="./../../../../../../assets/prohub logo 2.png">
+  </div>
+
+  <!-- main content -->
+<div class="member-signup-container">
+  <!-- side nav -->
+  <div class="side-nav">
+    <!-- current tab indexing begin from 0(1st tab = 0, 13th tab = 12)-->
+    <div *ngFor="let tab of arrayOfTabs; let i=index"
+      [ngClass]="{'side-nav-content-active': (currentTab >= i) || (tabVisited[i] === true), 'side-nav-content-inactive': (currentTab < i) && (tabVisited[i] === false)}"
+      (click)="setCurrentTab(tab.url)"
+      class="side-nav-content">
+        <div *ngIf="currentTab === i"></div>
+        <div *ngIf="currentTab !== i" id="remove-border"></div>
+        <span class="material-icons outlined list-icon">{{tab.icon}}</span>
+        <span class="list-text">{{tab.name}}</span>
+        <span class="material-icons outlined tick">check_circle</span>
+    </div>
+  </div>
+  <!-- steps to collect user info -->
+  <div class="info-collection-containter">
+    <router-outlet (activate)="componentAdded($event)"></router-outlet>
+  </div>
+</div>
+  <!-- footer -->

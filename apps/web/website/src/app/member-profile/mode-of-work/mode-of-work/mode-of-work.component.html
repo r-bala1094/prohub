@@ -1,0 +1,25 @@
+<section>
+    <div class="container mt-4 ml-2">
+        <div class="row">
+            <div class="col-sm col-md">
+                <h3><b>Mode of Work</b></h3>
+                <p class="definiton">Please Indicate your preferred mode of work :</p>
+                    <hr/>
+                <section class="example-section mt-4 mb-4">
+                    <mat-checkbox  *ngFor="let work of works" color="primary" class="checkbox">{{work}}</mat-checkbox>
+                    <hr/>
+                </section>
+             </div>
+        </div>
+       </div>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm col-md">
+                    <button mat-raised-button class="ml-2 back" (click)="handleMovePage('back')">BACK</button>
+                    <button mat-raised-button color="primary" class="ml-2 next" (click)="handleMovePage('next')">NEXT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

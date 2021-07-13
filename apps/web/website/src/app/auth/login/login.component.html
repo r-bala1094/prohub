@@ -1,0 +1,83 @@
+  <!--Header-->
+          <section class="navigation-bar w-100">
+            <div class="container-fluid header-content">
+              <div class="row">
+                <div class="col-sm col-md">
+                  <div class="navbar">
+                    <div class="navbar-brand">
+                      <img src="../../../../assets/landingPage/ProHub-Logo.svg" alt="logo.svg" width="120px" (click)="navigateTo('/')">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+   <!--Login-form--->
+           <div class="container">
+             <div class="row">
+               <div class="col-sm col-md m-auto">
+                <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+                    <h1 class="sign-in-form-heading">Sign in to enter<br/> your account</h1>
+                    <p class="form-p">Don't have an account?<span id="signup-text">
+                      <a id="signup-text-a" routerLink="/auth">SIGN UP</a> </span></p>
+                   
+                    <mat-form-field class="passwrd-form-field w-100">
+                      <mat-label>Enter your email</mat-label>
+                      <input class="w-100" matInput
+                      type="email"  
+                      placeholder="Email"
+                      formControlName="email"/>
+                    </mat-form-field>
+                    
+                    <mat-form-field class="passwrd-form-field w-100">
+                        <mat-label>Enter your password</mat-label>
+                        <input class="matinput w-100" matInput [type]="hide ? 'password' : 'text'"
+                        type="password"  
+                        placeholder="Password"
+                        formControlName="password"/>
+                        <button mat-icon-button matSuffix  (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                     </mat-form-field>
+
+                    <p id="forgot-password" class="mt-3">Forgot password ?</p>
+                    <button id="form-login-btn" type="submit" class="btn mt-5">LOG IN</button>
+                    <p id="sign-in-with" class="mt-2">or sign in with</p>
+                    <div class="container">
+                    <div class="row">
+                      <div class="col-sm-col-md">
+                    <div class="form-icons mt-2">
+                        <img src="../../assets/landingPage/login_facebook.svg" width="30px" id="fbpng">
+                        <img src="../../assets/landingPage/login_linkedin.svg" width="30px" id="linkpng">
+                        <img src="../../assets/landingPage/login_apple.svg" width="30px" id="applepng">
+                        <img src="../../assets/landingPage/login_google.svg" width="30px" id="googlepng">
+                   </div>
+                  </div>
+                  </div>
+                </div>
+               </form>
+              </div>
+            </div>
+          </div>
+      <!---footer-->
+               <section class="footer mt-5">
+                     <div class="container text-center">
+                         <div class="row">
+                            <div class="col-sm col-md mt-2">
+                            © 2021 Prohub Global Inc.
+                          </div>
+                      </div>
+                       <div class="row">
+                          <div class="col-md mt-4">
+                            Terms of Services
+                          </div>
+                       </div>
+                        <div class="row">
+                          <div class="col-md mt-2">
+                            Privacy Policy
+                          </div>
+                        </div>
+                      </div>
+                 </section>
+  

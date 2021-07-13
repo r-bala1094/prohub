@@ -1,0 +1,25 @@
+<mat-form-field class="example-full-width w-100" appearance="outline">
+  <mat-label>{{ lableName }}</mat-label>
+  <input
+    type="text"
+    placeholder="Select"
+    aria-label="Select"
+    #designation
+    matInput
+    [formControl]="myControl"
+    [matAutocomplete]="auto"
+  />
+
+  <mat-autocomplete
+    autoActiveFirstOption
+    #auto="matAutocomplete"
+    (optionSelected)="
+      designation.value = (myControl.value || {})[keyName];
+      changeEvent($event.option.value)
+    "
+  >
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option[keyName] }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

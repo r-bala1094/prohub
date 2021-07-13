@@ -1,0 +1,82 @@
+.container {
+  > div {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  .header {
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0px 1px 2px #0000001a;
+    display: flex;
+    letter-spacing: -0.63px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    .title {
+      color: #444853;
+      display: flex;
+      flex-direction: column;
+      font: normal normal bold 25px/35px Libre Franklin;
+
+      span {
+        color: #444853;
+        font: normal normal normal 16px/35px Libre Franklin;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
+
+  .mat-radio-group {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    width: 390px;
+    .option {
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      padding: 5px;
+      width: 180px;
+
+      .mat-radio-button {
+        align-self: flex-end;
+      }
+
+      .material-icons {
+        font-size: 40px;
+      }
+
+      > div {
+        text-align: center;
+        font: normal normal medium 16px/19px Libre Franklin;
+        letter-spacing: 0px;
+        color: #444853;
+        word-wrap: normal;
+        width: 100%;
+      }
+
+      .help-text {
+        text-align: center;
+        font: normal normal normal 14px/17px Libre Franklin;
+        letter-spacing: 0px;
+        color: #b2b7c4;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .footer {
+    border-top: 1px solid #bdbdbd;
+    margin-top: -10px;
+    padding-top: 20px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}

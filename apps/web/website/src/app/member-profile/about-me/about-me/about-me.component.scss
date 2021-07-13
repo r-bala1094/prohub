@@ -1,0 +1,58 @@
+$border-color: #E4E4E4;
+.about-me-container {
+  border-left: 2px solid $border-color;
+  border-right: 2px solid $border-color;
+  min-height: 520px;
+  width: 100%;
+
+  .edit-section, .header {
+    align-items: center;
+    border-bottom: 2px solid $border-color;
+    border-top: 2px solid $border-color;
+    display: flex;
+    min-height: 90px;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  .header {
+    color: black;
+    font: normal normal bold 25px/35px Libre Franklin;
+    display: block;
+    padding: 20px 20px 10px 20px;
+    p {
+      text-align: left;
+      font: normal normal normal 14px/18px Libre Franklin;
+      letter-spacing: 0px;
+      color: #808080;
+      opacity: 1;
+      padding-top: 5px;
+    }
+  }
+  .back-button {
+   margin-right: 20px;
+  }
+
+  .about-me-content {
+    min-height: 340px;
+    padding: 20px;
+
+    label {
+      font-size: 14px;
+      letter-spacing: 0px;
+      color: black;
+    }
+
+    textarea {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 2px #0000001A;
+      border: 1px solid #BDBDBD;
+      border-radius: 4px;
+      width: 632px;
+      min-height: 130px;
+      resize: none;
+      font-size: 14px;
+      color: #212121;
+    }
+  }
+}
